@@ -1,0 +1,19 @@
+{
+  "name": "valtechcreative",
+  "version": "1.0.0",
+  "description": "New website for ValtechCreative.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ECWireless/valtechcreative.git"
+  },
+  "author": "ECWireless",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ECWireless/valtechcreative/issues"
+  },
+  "homepage": "https://github.com/ECWireless/valtechcreative#readme"
+}
