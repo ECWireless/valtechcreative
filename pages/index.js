@@ -4,7 +4,8 @@ import Head from 'next/head';
 import {
     Card,
     Container,
-    H1,
+    Img,
+    Logo,
     P,
 } from '../components'
 
@@ -18,11 +19,10 @@ const index = () => {
             </Head>
             <main>
                 <Card>
-                    <Container style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%'}}>
-                        <P style={{fontSize: '24px'}}>The</P>
-                        <H1 style={{marginTop: '15px'}}>Valtech website</H1>
-                        <P style={{fontSize: '24px', marginTop: '25px'}}>is currently being updated. Thanks for your patients!</P>
-                        <img style={{width: '450px', height: '350px', marginTop: '40px'}} src="/routine-maintenance.gif" alt="working"/>
+                    <Container style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%'}}>
+                        <Logo src="/Valtech-Logo.png" />
+                        <P>Our website is currently being redesigned. Thanks for your patients!</P>
+                        <Img style={{ marginTop: '40px' }} id="contstuction-gif" src="/routine-maintenance.gif" alt="construction"/>
                     </Container>
                 </Card>
             </main>
