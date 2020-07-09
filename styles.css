@@ -4,5 +4,10 @@
 }
 
 body {
-    background: lightgrey;
+    background: linear-gradient(to bottom right ,#5891C5, #094c89);
+    background-repeat: none;
+    height: 100vh;
+    color: #2d2d2d
 }
+
+/* Blue: #1263AD */
