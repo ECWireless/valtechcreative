@@ -19,7 +19,6 @@ export const Card = styled.div`
     -webkit-box-shadow: 1px 5px 5px -1px rgba(0,0,0,0.38);
     -moz-box-shadow: 1px 5px 5px -1px rgba(0,0,0,0.38);
     box-shadow: 1px 5px 5px -1px rgba(0,0,0,0.38);
-    border: 2px solid #FBF30A;
 `
 
 export const respondTo = Object.keys(breakpoints).reduce((accumulator, label) => {
