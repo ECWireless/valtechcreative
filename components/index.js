@@ -52,10 +52,28 @@ export const Container = styled.div`
 	`}
 `
 
+export const Flex = styled.div`
+    display: flex;
+`
+
 export const H1 = styled.h1`
-    font-size: 45px;
+    font-size: 65px;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
+    color: #FAF30E;
+
+    ${props =>
+        props.uppercase &&
+        css`
+            text-transform: uppercase;
+        `};
+`
+
+export const H2 = styled.h2`
+    font-size: 50px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    color: #FAF30E;
 
     ${props =>
         props.uppercase &&
@@ -111,11 +129,37 @@ export const Logo = styled.img`
 	`}
 `
 
-export const P = styled.p`
+export const P1 = styled.p`
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #fff;
+
+    ${respondTo.sm`
+    font-weight: 400;
+        font-size: 28px;
+    `}
+
+    ${respondTo.md`
+        font-size: 38px;
+    `}
+
+    ${respondTo.lg`
+        font-size: 45px;
+    `}
+
+    ${props =>
+        props.uppercase &&
+        css`
+            text-transform: uppercase;
+        `};
+`
+
+export const P2 = styled.p`
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    color: #094c89;
+    color: #fff;
 
     ${respondTo.sm`
     font-weight: 400;
