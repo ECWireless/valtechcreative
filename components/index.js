@@ -7,6 +7,48 @@ export const breakpoints = {
 	lg: '1200px'
 };
 
+export const respondTo = Object.keys(breakpoints).reduce((accumulator, label) => {
+	accumulator[label] = (...args) => css`
+		@media (min-width: ${breakpoints[label]}) {
+			${css(...args)};
+		}
+	`;
+	return accumulator;
+}, {});
+
+export const Box = styled.div`
+    ${props =>
+        css`
+            width: ${props.width * .3}px;
+            margin-top: ${props.marginTop * .4}px;
+            margin-left: ${props.marginLeft * .4}px;
+
+            ${respondTo.xs`
+                width: ${props.width * .45}px;
+                margin-top: ${props.marginTop * .45}px;
+                margin-left: ${props.marginLeft * .45}px;
+            `}
+            
+            ${respondTo.sm`
+                width: ${props.width * .7}px;
+                margin-top: ${props.marginTop * .7}px;
+                margin-left: ${props.marginLeft * .7}px;
+            `}
+
+            ${respondTo.md`
+                width: ${props.width}px;
+                margin-top: ${props.marginTop}px;
+                margin-left: ${props.marginLeft}px;
+            `}
+
+            ${respondTo.lg`
+                width: ${props.width}px;
+                margin-top: ${props.marginTop}px;
+                margin-left: ${props.marginLeft}px;
+            `}
+        `};
+`
+
 export const Card = styled.div`
     position: absolute;
     top: 50%;
@@ -20,15 +62,6 @@ export const Card = styled.div`
     -moz-box-shadow: 1px 5px 5px -1px rgba(0,0,0,0.38);
     box-shadow: 1px 5px 5px -1px rgba(0,0,0,0.38);
 `
-
-export const respondTo = Object.keys(breakpoints).reduce((accumulator, label) => {
-	accumulator[label] = (...args) => css`
-		@media (min-width: ${breakpoints[label]}) {
-			${css(...args)};
-		}
-	`;
-	return accumulator;
-}, {});
 
 export const Container = styled.div`
     position: relative;
@@ -57,10 +90,26 @@ export const Flex = styled.div`
 `
 
 export const H1 = styled.h1`
-    font-size: 65px;
+    font-size: 30px;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
     color: #FAF30E;
+
+    ${respondTo.xs`
+        font-size: 40px;
+    `}
+    
+    ${respondTo.sm`
+        font-size: 45px;
+    `}
+
+    ${respondTo.md`
+        font-size: 55px;
+    `}
+
+    ${respondTo.lg`
+        font-size: 65px;
+	`}
 
     ${props =>
         props.uppercase &&
@@ -70,10 +119,26 @@ export const H1 = styled.h1`
 `
 
 export const H2 = styled.h2`
-    font-size: 50px;
+    font-size: 18px;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
     color: #FAF30E;
+
+    ${respondTo.xs`
+        font-size: 26px;
+    `}
+    
+    ${respondTo.sm`
+        font-size: 34px;
+    `}
+
+    ${respondTo.md`
+        font-size: 42px;
+    `}
+
+    ${respondTo.lg`
+        font-size: 50px;
+	`}
 
     ${props =>
         props.uppercase &&
@@ -83,7 +148,6 @@ export const H2 = styled.h2`
 `
 
 export const Img = styled.img`
-
     width: 250px;
     height: 200px;
     
@@ -130,14 +194,18 @@ export const Logo = styled.img`
 `
 
 export const P1 = styled.p`
-    font-size: 24px;
+    font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     color: #fff;
 
+    ${respondTo.xs`
+        font-size: 22px;
+    `}
+
     ${respondTo.sm`
-    font-weight: 400;
-        font-size: 28px;
+        font-weight: 400;
+        font-size: 30px;
     `}
 
     ${respondTo.md`
@@ -145,7 +213,7 @@ export const P1 = styled.p`
     `}
 
     ${respondTo.lg`
-        font-size: 45px;
+        font-size: 46px;
     `}
 
     ${props =>
