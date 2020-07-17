@@ -14,6 +14,12 @@ import {
 import { Container, Col2, Col2Left, Col2Right } from '../components/Containers'
 import { H3, P2 } from '../components/Typography'
 
+// Icons
+import BackendIcon from '../components/BackendIcon'
+import CustomizationIcon from '../components/CustomizationIcon'
+import SearchIcon from '../components/SearchIcon'
+import SpeedIcon from '../components/SpeedIcon'
+
 const index = () => {
     return (
         <>
@@ -31,49 +37,61 @@ const index = () => {
                                 <Card width={100} paddingTop={150} paddingBottom={150}>
                                     <Col2>
                                         <Col2Left align={'center'} justify={'flex-start'}>
-                                            <Box with={100}>
+                                            <Box width={50}>
+                                                <CustomizationIcon />
+                                            </Box>
+                                            <Box with={300} marginTop={40}>
                                                 <H3 align={'center'}>Complete Customization</H3>
                                                 <Box marginTop={20}>
                                                     <Line width={100} height={5} color={'yellow'} />
                                                 </Box>
                                             </Box>
-                                            <Box width={400} marginTop={30}>
+                                            <Box width={360} marginTop={30}>
                                                 <P2 align={'center'}>We work with our clients 1-on-1 to get your branding just right.</P2>
                                             </Box>
                                         </Col2Left>
                                         <Col2Right align={'center'} justify={'flex-start'}>
-                                            <Box width={300}>
+                                            <Box width={50}>
+                                                <SpeedIcon />
+                                            </Box>
+                                            <Box width={300} marginTop={40}>
                                                 <H3 align={'center'}>Blazing<br/>Load Speeds</H3>
                                                 <Box marginTop={20}>
                                                     <Line width={100} height={5} color={'yellow'} />
                                                 </Box>
                                             </Box>
-                                            <Box width={400} marginTop={30}>
+                                            <Box width={350} marginTop={30}>
                                                 <P2 align={'center'}>Our frameworks are modern, flexible, and always fast.</P2>
                                             </Box>
                                         </Col2Right>
                                     </Col2>
                                     <Col2>
                                         <Col2Left align={'center'} justify={'flex-start'}>
-                                            <Box with={100}  marginTop={200}>
-                                                <H3 align={'center'}>Complete Customization</H3>
+                                            <Box width={50} marginTop={150}>
+                                                <BackendIcon />
+                                            </Box>
+                                            <Box with={300} marginTop={40}>
+                                                <H3 align={'center'}>Backend<br/>Infrastructure</H3>
                                                 <Box marginTop={20}>
                                                     <Line width={100} height={5} color={'yellow'} />
                                                 </Box>
                                             </Box>
-                                            <Box width={400} marginTop={30}>
-                                                <P2 align={'center'}>We work with our clients 1-on-1 to get your branding just right.</P2>
+                                            <Box width={350} marginTop={30}>
+                                                <P2 align={'center'}>Custom CMS configuration is available for any projects that need consistently updated or maintained content</P2>
                                             </Box>
                                         </Col2Left>
                                         <Col2Right align={'center'} justify={'flex-start'}>
-                                            <Box width={300} marginTop={200}>
-                                                <H3 align={'center'}>Blazing<br/>Load Speeds</H3>
+                                            <Box width={50} marginTop={150}>
+                                                <SearchIcon />
+                                            </Box>
+                                            <Box width={300} marginTop={40}>
+                                                <H3 align={'center'}>SEO<br/>Friendly</H3>
                                                 <Box marginTop={20}>
                                                     <Line width={100} height={5} color={'yellow'} />
                                                 </Box>
                                             </Box>
-                                            <Box width={400} marginTop={30}>
-                                                <P2 align={'center'}>Our frameworks are modern, flexible, and always fast.</P2>
+                                            <Box width={350} marginTop={30}>
+                                                <P2 align={'center'}>Our websites are never shipped without a 100% score from Google Lighthouse.</P2>
                                             </Box>
                                         </Col2Right>
                                     </Col2>
