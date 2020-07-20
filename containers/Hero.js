@@ -8,7 +8,14 @@ import { H1, H2, P1 } from '../components/Typography'
 import { Container, Flex } from '../components/Containers'
 import LocationIcon from '../components/LocationIcon'
 
-const Hero = () => {
+export default class Hero extends React.Component {
+    state = {
+        loading: true,
+    }
+    componentDidMount() {
+        this.setState({ loading: false })
+    }
+    render() {
     return (
         <>
             <Particles
@@ -47,7 +54,7 @@ const Hero = () => {
                         <Box marginTop={60}>
                             <H2 id="hero__heading2">Based in...</H2>
                         </Box>
-                        <LocationIcon />
+                        {!this.state.loading && <LocationIcon />}
                         <Box marginTop={60}>
                             <H2 id="hero__location"><ReactRotatingText
                                 items={['Los Angeles', 'Pittsburgh', 'Amsterdam', 'Boulder', 'Anywhere']}
@@ -59,7 +66,5 @@ const Hero = () => {
                     </Box>
                 </Container>
         </>
-    )
+    )}
 }
-
-export default Hero
