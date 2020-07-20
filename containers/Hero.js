@@ -47,9 +47,7 @@ const Hero = () => {
                         <Box marginTop={60}>
                             <H2 id="hero__heading2">Based in...</H2>
                         </Box>
-                        <Box width={60} marginTop={50} marginLeft={30}>
-                            <LocationIcon />
-                        </Box>
+                        <LocationIcon />
                         <Box marginTop={60}>
                             <H2 id="hero__location"><ReactRotatingText
                                 items={['Los Angeles', 'Pittsburgh', 'Amsterdam', 'Boulder', 'Anywhere']}
