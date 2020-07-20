@@ -12,13 +12,15 @@ export default class Hero extends React.Component {
     state = {
         loading: true,
     }
+
     componentDidMount() {
         this.setState({ loading: false })
     }
+
     render() {
-    return (
-        <>
-            <Particles
+        return (
+            <>
+                <Particles
                     id="particles"
                     params={{
                         "particles": {
@@ -65,6 +67,7 @@ export default class Hero extends React.Component {
                         <P1 id="hero__paragraph1">Specializing in custom Websites, Web Apps, and Native Applications</P1>
                     </Box>
                 </Container>
-        </>
-    )}
+            </>
+        )
+    }
 }

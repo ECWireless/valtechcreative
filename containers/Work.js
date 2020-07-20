@@ -1,5 +1,3 @@
-import React from 'react'
-
 // Components
 import { Line, Link, Showcase } from '../components'
 import { Container, Flex, Col2, Col2Left, Col2Right } from '../components/Containers'
