@@ -1,20 +1,5 @@
 import styled, { css } from 'styled-components'
-
-export const breakpoints = {
-	xs: '480px',
-	sm: '768px',
-	md: '992px',
-	lg: '1200px'
-};
-
-export const respondTo = Object.keys(breakpoints).reduce((accumulator, label) => {
-	accumulator[label] = (...args) => css`
-		@media (min-width: ${breakpoints[label]}) {
-			${css(...args)};
-		}
-	`;
-	return accumulator;
-}, {});
+import respondTo from './Breakpoints'
 
 export const H1 = styled.h1`
     font-size: 30px;
@@ -44,6 +29,7 @@ export const H1 = styled.h1`
 
     ${props => css`
         text-align: ${props.align};
+        color: ${props.color};
     `};
 `
 

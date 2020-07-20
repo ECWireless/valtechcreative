@@ -1,133 +1,28 @@
 import styled, { css } from 'styled-components'
-
-export const breakpoints = {
-	xs: '480px',
-	sm: '768px',
-	md: '992px',
-	lg: '1200px'
-};
-
-export const respondTo = Object.keys(breakpoints).reduce((accumulator, label) => {
-	accumulator[label] = (...args) => css`
-		@media (min-width: ${breakpoints[label]}) {
-			${css(...args)};
-		}
-	`;
-	return accumulator;
-}, {});
+import respondTo from './Breakpoints'
 
 export const Background = styled.div`
     ${props => css`
         background: #fff;
         width: 100%;
-        height: 1000px;
+        height: 2500px;
 
         ${respondTo.xs`
-            height: 1200px;
+            height: 3000px;
         `}
         
         ${respondTo.sm`
-            height: 1700px;
+            height: 3700px;
         `}
 
         ${respondTo.md`
-            height: 1000px;
+            height: 2200px;
         `}
 
         ${respondTo.lg`
+            height: 2500px;
         `}
     `};
-`
-
-export const Box = styled.div`
-    ${props =>
-        css`
-            width: ${props.width * .3}px;
-            margin-top: ${props.marginTop * .4}px;
-            margin-left: ${props.marginLeft * .4}px;
-
-            ${respondTo.xs`
-                width: ${props.width * .45}px;
-                margin-top: ${props.marginTop * .45}px;
-                margin-left: ${props.marginLeft * .45}px;
-            `}
-            
-            ${respondTo.sm`
-                width: ${props.width * .7}px;
-                margin-top: ${props.marginTop * .7}px;
-                margin-left: ${props.marginLeft * .7}px;
-            `}
-
-            ${respondTo.md`
-                width: ${props.width}px;
-                margin-top: ${props.marginTop}px;
-                margin-left: ${props.marginLeft}px;
-            `}
-
-            ${respondTo.lg`
-                width: ${props.width}px;
-                margin-top: ${props.marginTop}px;
-                margin-left: ${props.marginLeft}px;
-            `}
-        `};
-`
-
-export const Box2 = styled.div`
-    ${props =>
-        css`
-            width: ${props.width * .6}px;
-            margin-top: ${props.marginTop * .4}px;
-            margin-left: ${props.marginLeft * .4}px;
-
-            ${respondTo.xs`
-                width: ${props.width * .7}px;
-                margin-top: ${props.marginTop * .45}px;
-                margin-left: ${props.marginLeft * .45}px;
-            `}
-            
-            ${respondTo.sm`
-                width: ${props.width}px;
-                margin-top: ${props.marginTop * .7}px;
-                margin-left: ${props.marginLeft * .7}px;
-            `}
-
-            ${respondTo.md`
-                margin-top: ${props.marginTop}px;
-                margin-left: ${props.marginLeft}px;
-            `}
-
-            ${respondTo.lg`
-            `}
-        `};
-`
-
-export const Box3 = styled.div`
-    ${props =>
-        css`
-            width: ${props.width * .6}px;
-            margin-top: ${props.marginTop * .7}px;
-            margin-left: ${props.marginLeft * .7}px;
-
-            ${respondTo.xs`
-                width: ${props.width * .7}px;
-                margin-top: ${props.marginTop * .8}px;
-                margin-left: ${props.marginLeft * .8}px;
-            `}
-            
-            ${respondTo.sm`
-                width: ${props.width}px;
-                margin-top: ${props.marginTop * .9}px;
-                margin-left: ${props.marginLeft * .9}px;
-            `}
-
-            ${respondTo.md`
-                margin-top: ${props.marginTop}px;
-                margin-left: ${props.marginLeft}px;
-            `}
-
-            ${respondTo.lg`
-            `}
-        `};
 `
 
 export const Card = styled.div`
@@ -178,12 +73,24 @@ export const Img = styled.img`
 
 export const Line = styled.div`
     ${props => css`
-        width: ${props.width}px;
+        width: ${props.width * .8}px;
         height: ${props.height * .5}px;
         margin: 0 auto;
 
         ${respondTo.xs`
             height: ${props.height}px;
+            width: ${props.width * .6}px;
+        `}
+        
+        ${respondTo.sm`
+            width: ${props.width * .8}px;
+        `}
+
+        ${respondTo.md`
+            width: ${props.width}px;
+        `}
+
+        ${respondTo.lg`
         `}
     `};
 
@@ -191,40 +98,61 @@ export const Line = styled.div`
         background: #FAF30E;
     `};
 
+    ${props => props.color === 'blue' && css`
+        background: #1062AD;
+    `};
+
     ${props => props.color === 'white' && css`
         background: #FFF;
     `};
 `
 
-export const Logo = styled.img`
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 20px auto;
-    border: 2px solid #FBF30A;
-    -webkit-box-shadow: 1px 2px 3px -1px rgba(0,0,0,0.38);
-    -moz-box-shadow: 1px 2px 3px -1px rgba(0,0,0,0.38);
-    box-shadow: 1px 2px 3px -1px rgba(0,0,0,0.38);
+export const Link = styled.a`
+    display: inline-block;
+    text-decoration: none;
 
-    ${respondTo.xs`
-        width: 50px;
-        height: 50px;
-        margin: 30px auto 30px;
-    `}
-    
-    ${respondTo.sm`
-        margin: 30px auto 40px;
-    `}
+    ${props => css`
+        width: ${props.width * .7}px;
+        height: ${props.height * .7}px;
 
-    ${respondTo.md`
-        margin: 40px auto 40px;
-    `}
+        ${respondTo.xs`
+            width: ${props.width * .9}px;
+            height: ${props.height * .9}px;
+        `}
+        
+        ${respondTo.sm`
+            width: ${props.width}px;
+            height: ${props.height}px;
+        `}
 
-    ${respondTo.lg`
-        width: 75px;
-        height: 75px;
-        margin: 40px auto 60px;
-	`}
+        ${respondTo.md`
+            width: ${props.width * .9}px;
+            height: ${props.height * .9}px;
+        `}
+
+        ${respondTo.lg`
+            width: ${props.width}px;
+            height: ${props.height}px;
+        `}
+    `};
+`
+
+export const Showcase = styled.div`
+    width: 100%;
+    height: 100%;
+    background: lightblue;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.4);
+    transition: all .3s ease;
+    background-position: center;
+    background-size: cover;
+    border: 1px #1062AD solid;
+
+    &:hover {
+        transform: scale(1.01);
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
+        border: 1px transparent solid;
+    }
 `
 
 export const Transform = styled.div`

@@ -1,20 +1,5 @@
 import styled, { css } from 'styled-components'
-
-export const breakpoints = {
-	xs: '480px',
-	sm: '768px',
-	md: '992px',
-	lg: '1200px'
-};
-
-export const respondTo = Object.keys(breakpoints).reduce((accumulator, label) => {
-	accumulator[label] = (...args) => css`
-		@media (min-width: ${breakpoints[label]}) {
-			${css(...args)};
-		}
-	`;
-	return accumulator;
-}, {});
+import respondTo from './Breakpoints'
 
 export const Container = styled.div`
     position: relative;
@@ -95,4 +80,9 @@ export const Col2Right = styled.div`
 
 export const Flex = styled.div`
     display: flex;
+
+    ${props => css`
+        justify-content: ${props.justify};
+        align-items: ${props.align};
+    `}
 `

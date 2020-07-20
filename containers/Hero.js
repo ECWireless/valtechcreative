@@ -3,9 +3,7 @@ import Particles from 'react-particles-js'
 import ReactRotatingText from 'react-rotating-text'
 
 // Components
-import {
-    Box,
-} from '../components'
+import { Box } from '../components/Boxes'
 import { H1, H2, P1 } from '../components/Typography'
 import { Container, Flex } from '../components/Containers'
 import LocationIcon from '../components/LocationIcon'
