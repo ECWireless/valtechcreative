@@ -39,19 +39,46 @@ export const Container = styled.div`
 `
 
 export const Col2 = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    ${props => css`
+        display: flex;
+        flex-direction: column;
+
+        ${respondTo.xs`
+        `}
+        
+        ${respondTo.sm`
+        `}
+
+        ${respondTo.md`
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+        `}
+
+        ${respondTo.lg`
+        `}
+    `}
 `
 
 export const Col2Left = styled.div`
-    grid-column: 1 / 2;
-    display: flex;
-    flex-direction: column;
-
     ${props => css`
+        display: flex;
+        flex-direction: column;
         align-items: ${props.align};
         justify-content: ${props.justify};
+
+        ${respondTo.xs`
+        `}
+        
+        ${respondTo.sm`
+        `}
+
+        ${respondTo.md`
+            grid-column: 1 / 2;
+        `}
+
+        ${respondTo.lg`
+        `}
     `}
 `
 

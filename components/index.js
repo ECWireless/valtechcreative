@@ -17,9 +17,26 @@ export const respondTo = Object.keys(breakpoints).reduce((accumulator, label) =>
 }, {});
 
 export const Background = styled.div`
-    background: #fff;
-    width: 100%;
-    height: 1000px;
+    ${props => css`
+        background: #fff;
+        width: 100%;
+        height: 1000px;
+
+        ${respondTo.xs`
+            height: 1200px;
+        `}
+        
+        ${respondTo.sm`
+            height: 1700px;
+        `}
+
+        ${respondTo.md`
+            height: 1000px;
+        `}
+
+        ${respondTo.lg`
+        `}
+    `};
 `
 
 export const Box = styled.div`
@@ -55,31 +72,91 @@ export const Box = styled.div`
         `};
 `
 
+export const Box2 = styled.div`
+    ${props =>
+        css`
+            width: ${props.width * .6}px;
+            margin-top: ${props.marginTop * .4}px;
+            margin-left: ${props.marginLeft * .4}px;
+
+            ${respondTo.xs`
+                width: ${props.width * .7}px;
+                margin-top: ${props.marginTop * .45}px;
+                margin-left: ${props.marginLeft * .45}px;
+            `}
+            
+            ${respondTo.sm`
+                width: ${props.width}px;
+                margin-top: ${props.marginTop * .7}px;
+                margin-left: ${props.marginLeft * .7}px;
+            `}
+
+            ${respondTo.md`
+                margin-top: ${props.marginTop}px;
+                margin-left: ${props.marginLeft}px;
+            `}
+
+            ${respondTo.lg`
+            `}
+        `};
+`
+
+export const Box3 = styled.div`
+    ${props =>
+        css`
+            width: ${props.width * .6}px;
+            margin-top: ${props.marginTop * .7}px;
+            margin-left: ${props.marginLeft * .7}px;
+
+            ${respondTo.xs`
+                width: ${props.width * .7}px;
+                margin-top: ${props.marginTop * .8}px;
+                margin-left: ${props.marginLeft * .8}px;
+            `}
+            
+            ${respondTo.sm`
+                width: ${props.width}px;
+                margin-top: ${props.marginTop * .9}px;
+                margin-left: ${props.marginLeft * .9}px;
+            `}
+
+            ${respondTo.md`
+                margin-top: ${props.marginTop}px;
+                margin-left: ${props.marginLeft}px;
+            `}
+
+            ${respondTo.lg`
+            `}
+        `};
+`
+
 export const Card = styled.div`
     ${props => css`
-        width: ${props.width * .3}px;
+        width: ${props.width}%;
+        height: ${props.height}px;
+        padding-top: ${props.paddingTop * .4}px;
+        padding-bottom: ${props.paddingBottom * .4}px;
+        background: linear-gradient(to top left ,#5891C5, #094c89);
+        border-radius: 15px;
+        margin: 0 auto;
+        box-shadow: 0px 4px 6px rgba(0,0,0,0.4);
 
         ${respondTo.xs`
-            width: ${props.width * .45}px;
+            padding-top: ${props.paddingTop * .4}px;
+            padding-bottom: ${props.paddingBottom * .4}px;
         `}
         
         ${respondTo.sm`
-            width: ${props.width * .7}px;
+            padding-top: ${props.paddingTop * .5}px;
+            padding-bottom: ${props.paddingBottom * .5}px;
         `}
 
         ${respondTo.md`
-            width: ${props.width}px;
         `}
 
         ${respondTo.lg`
-            width: ${props.width}%;
-            height: ${props.height}px;
             padding-top: ${props.paddingTop}px;
             padding-bottom: ${props.paddingBottom}px;
-            background: linear-gradient(to top left ,#5891C5, #094c89);
-            border-radius: 15px;
-            margin: 0 auto;
-            box-shadow: 0px 4px 6px rgba(0,0,0,0.4);
         `}
     `};
 `
@@ -102,8 +179,12 @@ export const Img = styled.img`
 export const Line = styled.div`
     ${props => css`
         width: ${props.width}px;
-        height: ${props.height}px;
+        height: ${props.height * .5}px;
         margin: 0 auto;
+
+        ${respondTo.xs`
+            height: ${props.height}px;
+        `}
     `};
 
     ${props => props.color === 'yellow' && css`
@@ -148,7 +229,25 @@ export const Logo = styled.img`
 
 export const Transform = styled.div`
     ${props => css`
-        transform: translateX(${props.x}px);
-        transform: translateY(${props.y}px);
+        transform: translateX(${props.x * .3}px);
+        transform: translateY(${props.y * .3}px);
+
+        ${respondTo.xs`
+            transform: translateX(${props.x * .4}px);
+            transform: translateY(${props.y * .4}px);
+        `}
+        
+        ${respondTo.sm`
+            transform: translateX(${props.x * .7}px);
+            transform: translateY(${props.y * .7}px);
+        `}
+
+        ${respondTo.md`
+            transform: translateX(${props.x}px);
+            transform: translateY(${props.y}px);
+        `}
+
+        ${respondTo.lg`
+        `}
     `}
 `
