@@ -20,7 +20,7 @@ export const Background = styled.div`
         `}
 
         ${respondTo.lg`
-            height: 2500px;
+            height: 2400px;
         `}
     `};
 `
