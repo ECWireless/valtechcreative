@@ -34,7 +34,7 @@ export default class Features extends React.Component {
                             <Col2>
                                 <Col2Left align={'center'} justify={'flex-start'}>
                                     <Box2 width={50} marginTop={150}>
-                                        {this.state.loading && <CustomizationIcon />}
+                                        {!this.state.loading && <CustomizationIcon />}
                                     </Box2>
                                     <Box3 with={300} marginTop={40}>
                                         <H3 align={'center'}>Complete<br/>Customization</H3>
@@ -48,7 +48,7 @@ export default class Features extends React.Component {
                                 </Col2Left>
                                 <Col2Right align={'center'} justify={'flex-start'}>
                                     <Box2 width={50} marginTop={150}>
-                                        {this.state.loading && <SpeedIcon />}
+                                        {!this.state.loading && <SpeedIcon />}
                                     </Box2>
                                     <Box3 width={300} marginTop={40}>
                                         <H3 align={'center'}>Blazing<br/>Load Speeds</H3>
@@ -64,7 +64,7 @@ export default class Features extends React.Component {
                             <Col2>
                                 <Col2Left align={'center'} justify={'flex-start'}>
                                     <Box2 width={50} marginTop={150}>
-                                        {this.state.loading && <BackendIcon />}
+                                        {!this.state.loading && <BackendIcon />}
                                     </Box2>
                                     <Box3 with={300} marginTop={40}>
                                         <H3 align={'center'}>Backend<br/>Infrastructure</H3>
@@ -78,7 +78,7 @@ export default class Features extends React.Component {
                                 </Col2Left>
                                 <Col2Right align={'center'} justify={'flex-start'}>
                                     <Box2 width={50} marginTop={150}>
-                                        {this.state.loading && <SearchIcon />}
+                                        {!this.state.loading && <SearchIcon />}
                                     </Box2>
                                     <Box3 width={300} marginTop={40}>
                                         <H3 align={'center'}>SEO<br/>Friendly</H3>
