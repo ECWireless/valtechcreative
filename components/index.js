@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import respondTo from './Breakpoints'
 
-export const Background = styled.div`
+export const Background1 = styled.div`
     ${props => css`
         background: #fff;
         width: 100%;
@@ -21,6 +21,30 @@ export const Background = styled.div`
 
         ${respondTo.lg`
             height: 2400px;
+        `}
+    `};
+`
+
+export const Background2 = styled.div`
+    ${props => css`
+        background: #fff;
+        width: 100%;
+        height: 700px;
+
+        ${respondTo.xs`
+            height: 800px;
+        `}
+        
+        ${respondTo.sm`
+            height: 1000px;
+        `}
+
+        ${respondTo.md`
+            height: 1000px;
+        `}
+
+        ${respondTo.lg`
+            height: 1000px;
         `}
     `};
 `
@@ -133,6 +157,37 @@ export const Link = styled.a`
         ${respondTo.lg`
             width: ${props.width}px;
             height: ${props.height}px;
+        `}
+    `};
+`
+
+export const Logo = styled.div`
+    ${props => css`
+        width: 80px;
+        height: 50px;
+        margin-top: 60px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        ${respondTo.xs`
+            width: 100px;
+            height: 75px;
+            margin-top: 60px;
+        `}
+        
+        ${respondTo.sm`
+            width: 200px;
+            height: 120px;
+            margin-top: 100px;
+        `}
+
+        ${respondTo.md`
+            width: 220px;
+            height: 120px;
+        `}
+
+        ${respondTo.lg`
         `}
     `};
 `

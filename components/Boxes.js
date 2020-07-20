@@ -8,12 +8,16 @@ export const Box = styled.div`
             margin-top: ${props.marginTop * .4}px;
             margin-bottom: ${props.marginBottom * .4}px;
             margin-left: ${props.marginLeft * .4}px;
+            padding-left: ${props.paddingLeft * .4}px;
+            padding-right: ${props.paddingRight * .4}px;
 
             ${respondTo.xs`
                 width: ${props.width * .45}px;
                 margin-top: ${props.marginTop * .45}px;
                 margin-bottom: ${props.marginBottom * .45}px;
                 margin-left: ${props.marginLeft * .45}px;
+                padding-left: ${props.paddingLeft * .45}px;
+                padding-right: ${props.paddingRight * .45}px;
             `}
             
             ${respondTo.sm`
@@ -21,6 +25,8 @@ export const Box = styled.div`
                 margin-top: ${props.marginTop * .7}px;
                 margin-bottom: ${props.marginBottom * .7}px;
                 margin-left: ${props.marginLeft * .7}px;
+                padding-left: ${props.paddingLeft * .7}px;
+                padding-right: ${props.paddingRight * .7}px;
             `}
 
             ${respondTo.md`
@@ -28,6 +34,8 @@ export const Box = styled.div`
                 margin-top: ${props.marginTop}px;
                 margin-bottom: ${props.marginBottom}px;
                 margin-left: ${props.marginLeft}px;
+                padding-left: ${props.paddingLeft}px;
+                padding-right: ${props.paddingRight}px;
             `}
 
             ${respondTo.lg`

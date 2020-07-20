@@ -84,5 +84,6 @@ export const Flex = styled.div`
     ${props => css`
         justify-content: ${props.justify};
         align-items: ${props.align};
+        flex-wrap: ${props.wrap};
     `}
 `
