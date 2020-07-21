@@ -6,6 +6,7 @@ import Features from '../containers/Features'
 import Work from '../containers/Work'
 import About from '../containers/About'
 import Tools from '../containers/Tools'
+import Contact from '../containers/Contact'
 
 // Components
 import { Background1, Background2 } from '../components'
@@ -31,6 +32,7 @@ const index = () => {
                 <Box marginTop={350}>
                     <Background2>
                         <Tools />
+                        <Contact />
                     </Background2>
                 </Box>
             </main>

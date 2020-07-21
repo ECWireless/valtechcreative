@@ -29,22 +29,22 @@ export const Background2 = styled.div`
     ${props => css`
         background: #fff;
         width: 100%;
-        height: 700px;
+        height: 1400px;
 
         ${respondTo.xs`
-            height: 800px;
+            height: 1500px;
         `}
         
         ${respondTo.sm`
-            height: 1000px;
+            height: 2000px;
         `}
 
         ${respondTo.md`
-            height: 1000px;
+            height: 2200px;
         `}
 
         ${respondTo.lg`
-            height: 1000px;
+            height: 2200px;
         `}
     `};
 `
