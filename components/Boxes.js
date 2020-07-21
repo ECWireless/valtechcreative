@@ -10,6 +10,8 @@ export const Box = styled.div`
             margin-left: ${props.marginLeft * .4}px;
             padding-left: ${props.paddingLeft * .4}px;
             padding-right: ${props.paddingRight * .4}px;
+            padding-top: ${props.paddingTop * .4}px;
+            padding-bottom: ${props.paddingBottom * .4}px;
 
             ${respondTo.xs`
                 width: ${props.width * .45}px;
@@ -18,6 +20,8 @@ export const Box = styled.div`
                 margin-left: ${props.marginLeft * .45}px;
                 padding-left: ${props.paddingLeft * .45}px;
                 padding-right: ${props.paddingRight * .45}px;
+                padding-top: ${props.paddingTop * .45}px;
+                padding-bottom: ${props.paddingBottom * .45}px;
             `}
             
             ${respondTo.sm`
@@ -27,6 +31,8 @@ export const Box = styled.div`
                 margin-left: ${props.marginLeft * .7}px;
                 padding-left: ${props.paddingLeft * .7}px;
                 padding-right: ${props.paddingRight * .7}px;
+                padding-top: ${props.paddingTop * .7}px;
+                padding-bottom: ${props.paddingBottom * .7}px;
             `}
 
             ${respondTo.md`
@@ -36,6 +42,8 @@ export const Box = styled.div`
                 margin-left: ${props.marginLeft}px;
                 padding-left: ${props.paddingLeft}px;
                 padding-right: ${props.paddingRight}px;
+                padding-top: ${props.paddingTop}px;
+                padding-bottom: ${props.paddingBottom}px;
             `}
 
             ${respondTo.lg`

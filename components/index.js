@@ -171,37 +171,6 @@ export const Link = styled.a`
     `}
 `
 
-export const Logo = styled.div`
-    ${props => css`
-        width: 80px;
-        height: 50px;
-        margin-top: 60px;
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-
-        ${respondTo.xs`
-            width: 100px;
-            height: 75px;
-            margin-top: 60px;
-        `}
-        
-        ${respondTo.sm`
-            width: 200px;
-            height: 120px;
-            margin-top: 100px;
-        `}
-
-        ${respondTo.md`
-            width: 220px;
-            height: 120px;
-        `}
-
-        ${respondTo.lg`
-        `}
-    `};
-`
-
 export const Showcase = styled.div`
     width: 100%;
     height: 100%;

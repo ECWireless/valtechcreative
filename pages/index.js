@@ -7,6 +7,7 @@ import Work from '../containers/Work'
 import About from '../containers/About'
 import Tools from '../containers/Tools'
 import Contact from '../containers/Contact'
+import Footer from '../containers/Footer'
 
 // Components
 import { Background1, Background2 } from '../components'
@@ -35,6 +36,7 @@ const index = () => {
                         <Contact />
                     </Background2>
                 </Box>
+                <Footer />
             </main>
         </>
     )
