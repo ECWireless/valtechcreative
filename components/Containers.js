@@ -85,5 +85,7 @@ export const Flex = styled.div`
         justify-content: ${props.justify};
         align-items: ${props.align};
         flex-wrap: ${props.wrap};
+        flex-direction: ${props.direction};
+        height: ${props.height};
     `}
 `
