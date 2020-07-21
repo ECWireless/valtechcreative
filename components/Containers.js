@@ -21,10 +21,6 @@ export const Container = styled.div`
     ${respondTo.lg`
         width: 1000px;
     `}
-    
-    ${props => css`
-        height: ${props.height};
-    `}
 `
 
 export const Col2 = styled.div`

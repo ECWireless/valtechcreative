@@ -38,7 +38,7 @@ const Hero = () => {
                     }
                 }}
             />
-            <Container height={'60vh'}>
+            <Container>
                 <Box width={800} marginTop={150}>
                     <H1>A Collaborative Agency for UX/UI Design</H1>
                 </Box>
