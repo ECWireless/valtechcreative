@@ -132,9 +132,9 @@ export const Input = styled.input`
     font-weight: 600;
     color: #FFF;
     width: 75%;
-    height: 50px;
+    height: 60px;
     margin: 0 auto;
-    padding: 5px 15px;
+    padding-left: 15px;
     background: #2a2a2a;
     border: none;
     border-radius: 5px;
@@ -222,7 +222,8 @@ export const TextArea = styled.textarea`
     width: 75%;
     height: 200px;
     margin: 0 auto;
-    padding: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
     background: #2a2a2a;
     border: none;
     border-radius: 5px;

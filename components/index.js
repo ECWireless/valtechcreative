@@ -134,10 +134,16 @@ export const Line = styled.div`
 export const Link = styled.a`
     display: inline-block;
     text-decoration: none;
+    transition: color .3s ease;
 
     ${props => css`
         width: ${props.width * .7}px;
         height: ${props.height * .7}px;
+        color: ${props.color};
+
+        &:hover {
+            color: ${props.hover};
+        }
 
         ${respondTo.xs`
             width: ${props.width * .9}px;
@@ -159,6 +165,10 @@ export const Link = styled.a`
             height: ${props.height}px;
         `}
     `};
+
+    ${props => props.color === 'yellow' && css`
+        color: #FAF30E;
+    `}
 `
 
 export const Logo = styled.div`
