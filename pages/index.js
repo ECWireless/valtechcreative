@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 // Containers
 import NavBar from '../containers/NavBar'
+import NavMenu from '../containers/NavMenu'
 import Hero from '../containers/Hero'
 import Features from '../containers/Features'
 import Work from '../containers/Work'
@@ -24,6 +25,7 @@ const index = () => {
             </Head>
             <main>
                 <NavBar />
+                {/* <NavMenu /> */}
                 <Hero />
                 <Box marginTop={350}>
                     <Background1>

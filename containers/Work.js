@@ -1,3 +1,5 @@
+import Fade from 'react-reveal/Fade';
+
 // Components
 import { Line, Link, Showcase } from '../components'
 import { Container, Flex, Col2, Col2Left, Col2Right } from '../components/Containers'
@@ -9,63 +11,75 @@ const Work = () => {
         <>
             <Container>
                 <Flex align={'center'} justify={'space-around'}>
-                    <Line width={75} height={5} color={'blue'} />
+                    <Fade delay={1000} ssrFadeout>
+                        <Line width={75} height={5} color={'blue'} />
+                    </Fade>
                     <H1 color={'#000'} align={'center'}>Check Out Our Work</H1>
-                    <Line width={75} height={5} color={'blue'} />
+                    <Fade delay={1000} ssrFadeout>
+                        <Line width={75} height={5} color={'blue'} />
+                    </Fade>
                 </Flex>
                 <Col2>
                     <Box marginTop={100}>
                         <Col2Left align={'center'} justify={'center'}>
-                            <Link
-                                href="https://www.parishdigital.com/"
-                                target="_blank" rel="noreferrer"
-                                width={400} height={400}
-                            >
-                                <Showcase
-                                    style={{backgroundImage: `url(/Showcase1.jpg)`}}
-                                />
-                            </Link>
+                            <Fade ssrFadeout>
+                                <Link
+                                    href="https://www.parishdigital.com/"
+                                    target="_blank" rel="noreferrer"
+                                    width={400} height={400}
+                                >
+                                    <Showcase
+                                        style={{backgroundImage: `url(/Showcase1.jpg)`}}
+                                    />
+                                </Link>
+                            </Fade>
                         </Col2Left>
                     </Box>
                     <Box marginTop={100}>
                         <Col2Right align={'center'} justify={'center'}>
-                            <Link
-                                href="https://www.parishdigital.com/"
-                                target="_blank" rel="noreferrer"
-                                width={400} height={400}
-                            >
-                                <Showcase
-                                    style={{backgroundImage: `url(/Showcase2.jpg)`}}
-                                />
-                            </Link>
+                            <Fade delay={500} ssrFadeout>
+                                <Link
+                                    href="https://www.parishdigital.com/"
+                                    target="_blank" rel="noreferrer"
+                                    width={400} height={400}
+                                >
+                                    <Showcase
+                                        style={{backgroundImage: `url(/Showcase2.jpg)`}}
+                                    />
+                                </Link>
+                            </Fade>
                         </Col2Right>
                     </Box>
                 </Col2>
                 <Col2>
                     <Box marginTop={100}>
                         <Col2Left align={'center'} justify={'center'}>
-                            <Link
-                                href="https://www.parishdigital.com/"
-                                target="_blank" rel="noreferrer"
-                                width={400} height={400}
-                            >
-                                <Showcase
-                                    style={{backgroundImage: `url(/Showcase3.jpg)`}}
-                                />
-                            </Link>
+                            <Fade ssrFadeout>
+                                <Link
+                                    href="https://www.parishdigital.com/"
+                                    target="_blank" rel="noreferrer"
+                                    width={400} height={400}
+                                >
+                                    <Showcase
+                                        style={{backgroundImage: `url(/Showcase3.jpg)`}}
+                                    />
+                                </Link>
+                            </Fade>
                         </Col2Left>
                     </Box>
                     <Box marginTop={100}>
                         <Col2Right align={'center'} justify={'center'}>
-                            <Link
-                                href="https://www.parishdigital.com/"
-                                target="_blank" rel="noreferrer"
-                                width={400} height={400}
-                            >
-                                <Showcase
-                                    style={{backgroundImage: `url(/Showcase4.jpg)`}}
-                                />
-                            </Link>
+                            <Fade delay={500} ssrFadeout>
+                                <Link
+                                    href="https://www.parishdigital.com/"
+                                    target="_blank" rel="noreferrer"
+                                    width={400} height={400}
+                                >
+                                    <Showcase
+                                        style={{backgroundImage: `url(/Showcase4.jpg)`}}
+                                    />
+                                </Link>
+                            </Fade>
                         </Col2Right>
                     </Box>
                 </Col2>

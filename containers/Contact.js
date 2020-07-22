@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Fade from 'react-reveal/Fade';
 
 // Components
 import { Line } from '../components'
@@ -41,9 +42,13 @@ const Contact = () => {
         <>
             <Container>
                 <Flex align={'center'} justify={'space-around'}>
-                    <Line width={75} height={5} color={'blue'} />
+                    <Fade delay={1000} ssrFadeout>
+                        <Line width={75} height={5} color={'blue'} />
+                    </Fade>
                     <H1 color={'#000'} align={'center'}>Contact Us</H1>
-                    <Line width={75} height={5} color={'blue'} />
+                    <Fade delay={1000} ssrFadeout>
+                        <Line width={75} height={5} color={'blue'} />
+                    </Fade>
                 </Flex>
                 <Box marginTop={100}>
                     <Form paddingTop={50} paddingBottom={50} onSubmit={onSubmit}>

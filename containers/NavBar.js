@@ -39,8 +39,6 @@ const SandWhichContainer = styled.div`
     transition: all .3s ease;
 
     ${respondTo.xs`
-        top: 15px;
-        left: 15px;
         width: 50px;
         height: 50px;
     `}
@@ -52,12 +50,24 @@ const SandWhichContainer = styled.div`
 
     ${respondTo.md`
         top: 25px;
-        left: 25px;
+        right: 45px;
     `}
 
     &:hover {
         transform: scale(1.02);
         box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
+        cursor: pointer;
+    }
+
+    &:focus {
+        transform: scale(.95);
+        box-shadow: 0px 4px 6px rgba(0,0,0,0.4);
+        cursor: pointer;
+    }
+
+    &:active {
+        transform: scale(.95);
+        box-shadow: 0px 4px 6px rgba(0,0,0,0.4);
         cursor: pointer;
     }
 `
