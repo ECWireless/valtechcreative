@@ -1,9 +1,10 @@
 import styled, { css } from 'styled-components'
 import respondTo from '../components/Breakpoints'
 import Fade from 'react-reveal/Fade';
+import Link from 'next/link'
 
 // Components
-import { Link } from '../components'
+import { CustomLink } from '../components'
 import { Box } from '../components/Boxes'
 import { Container, Flex } from '../components/Containers'
 import { P1, P2 } from '../components/Typography'
@@ -23,45 +24,67 @@ const NavMenu = (props) => {
                                     <NavFlex>
                                         <NavBarTop>
                                             <NavTopFlex>
-                                                <NavValtech style={{backgroundImage: 'url(./Valtech-Logo.png)'}} />
+                                                <Link href="/">
+                                                    <NavValtech onClick={() => props.setClosed(true)} style={{backgroundImage: 'url(./Valtech-Logo.png)'}} />
+                                                </Link>
                                                 <P2 color={'blue'}>Valtech Creative</P2>
                                             </NavTopFlex>
                                         </NavBarTop>
                                         <NavListContainer>
-                                            <NavListItem>
-                                                <P1 uppercase color={'inherit'} align={'center'}>Features</P1>
-                                            </NavListItem>
-                                            <NavListItem>
-                                                <P1 uppercase color={'inherit'} align={'center'}>Work</P1>
-                                            </NavListItem>
-                                            <NavListItem>
-                                                <P1 uppercase color={'inherit'} align={'center'}>About</P1>
-                                            </NavListItem>
-                                            <NavListItem>
-                                                <P1 uppercase color={'inherit'} align={'center'}>Tools</P1>
-                                            </NavListItem>
-                                            <NavListItem>
-                                                <P1 uppercase color={'inherit'} align={'center'}>Contact</P1>
-                                            </NavListItem>
+                                            <Link href="/#features">
+                                                <NavListItem>
+                                                    <P1 onClick={() => props.setClosed(true)} uppercase color={'inherit'} align={'center'}>
+                                                        Features
+                                                    </P1>
+                                                </NavListItem>
+                                            </Link>
+                                            <Link href="/#work">
+                                                <NavListItem>
+                                                    <P1 onClick={() => props.setClosed(true)} uppercase color={'inherit'} align={'center'}>
+                                                        Work
+                                                    </P1>
+                                                </NavListItem>
+                                            </Link>
+                                            <Link href="/#about">
+                                                <NavListItem>
+                                                    <P1 onClick={() => props.setClosed(true)} uppercase color={'inherit'} align={'center'}>
+                                                        About
+                                                    </P1>
+                                                </NavListItem>
+                                            </Link>
+                                            <Link href="/#tools">
+                                                <NavListItem>
+                                                    <P1 onClick={() => props.setClosed(true)} uppercase color={'inherit'} align={'center'}>
+                                                        Tools
+                                                    </P1>
+                                                </NavListItem>
+                                            </Link>
+                                            <Link href="/#contact">
+                                                <NavListItem>
+                                                    <P1 onClick={() => props.setClosed(true)} uppercase color={'inherit'} align={'center'}>
+                                                        Contact
+                                                    </P1>
+                                                </NavListItem>
+                                            </Link>
                                         </NavListContainer>
                                     </NavFlex>
                                     <NavBarBottom>
                                         <Flex wrap={'wrap'} align={'center'} justify={'center'} style={{height: '100%'}}>
                                             <Box>
-                                                <Link
-                                                        href="https://github.com/ecwireless"
-                                                        target="_blank" rel="noreferrer"
-                                                    >
-                                                        <NavIcon style={{backgroundImage: 'url(./github-logo.png)'}} />
-                                                    </Link>
-                                                </Box>
+                                            <CustomLink
+                                                    href="https://github.com/ecwireless"
+                                                    target="_blank" rel="noreferrer"
+                                                >
+                                                    <NavIcon style={{backgroundImage: 'url(./github-logo.png)'}} />
+                                                </CustomLink>
+                                            </Box>
                                             <Box marginLeft={20}>
-                                                <Link
+                                                <CustomLink
                                                     href="https://www.facebook.com/valtechcreative"
                                                     target="_blank" rel="noreferrer"
                                                 >
                                                     <NavIcon style={{backgroundImage: 'url(./facebook-logo.png)'}} />
-                                                </Link>
+                                                </CustomLink>
                                             </Box>
                                             <Box marginLeft={40}>
                                                 <P2 color={'#000'}>Elliott@ValtechCreative.com</P2>
@@ -305,6 +328,10 @@ const NavValtech = styled.div`
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+
+        &:hover {
+            cursor: pointer;
+        }
 
         ${respondTo.xs`
         `}

@@ -1,7 +1,7 @@
 import Fade from 'react-reveal/Fade';
 
 // Components
-import { Line, Link, Showcase } from '../components'
+import { Line, CustomLink, Showcase } from '../components'
 import { Container, Flex, Col2, Col2Left, Col2Right } from '../components/Containers'
 import { H1 } from '../components/Typography'
 import { Box } from '../components/Boxes'
@@ -23,7 +23,7 @@ const Work = () => {
                     <Box marginTop={100}>
                         <Col2Left align={'center'} justify={'center'}>
                             <Fade ssrFadeout>
-                                <Link
+                                <CustomLink
                                     href="https://www.parishdigital.com/"
                                     target="_blank" rel="noreferrer"
                                     width={400} height={400}
@@ -31,14 +31,14 @@ const Work = () => {
                                     <Showcase
                                         style={{backgroundImage: `url(/Showcase1.jpg)`}}
                                     />
-                                </Link>
+                                </CustomLink>
                             </Fade>
                         </Col2Left>
                     </Box>
                     <Box marginTop={100}>
                         <Col2Right align={'center'} justify={'center'}>
                             <Fade delay={500} ssrFadeout>
-                                <Link
+                                <CustomLink
                                     href="https://www.parishdigital.com/"
                                     target="_blank" rel="noreferrer"
                                     width={400} height={400}
@@ -46,7 +46,7 @@ const Work = () => {
                                     <Showcase
                                         style={{backgroundImage: `url(/Showcase2.jpg)`}}
                                     />
-                                </Link>
+                                </CustomLink>
                             </Fade>
                         </Col2Right>
                     </Box>
@@ -55,7 +55,7 @@ const Work = () => {
                     <Box marginTop={100}>
                         <Col2Left align={'center'} justify={'center'}>
                             <Fade ssrFadeout>
-                                <Link
+                                <CustomLink
                                     href="https://www.parishdigital.com/"
                                     target="_blank" rel="noreferrer"
                                     width={400} height={400}
@@ -63,14 +63,14 @@ const Work = () => {
                                     <Showcase
                                         style={{backgroundImage: `url(/Showcase3.jpg)`}}
                                     />
-                                </Link>
+                                </CustomLink>
                             </Fade>
                         </Col2Left>
                     </Box>
                     <Box marginTop={100}>
                         <Col2Right align={'center'} justify={'center'}>
                             <Fade delay={500} ssrFadeout>
-                                <Link
+                                <CustomLink
                                     href="https://www.parishdigital.com/"
                                     target="_blank" rel="noreferrer"
                                     width={400} height={400}
@@ -78,7 +78,7 @@ const Work = () => {
                                     <Showcase
                                         style={{backgroundImage: `url(/Showcase4.jpg)`}}
                                     />
-                                </Link>
+                                </CustomLink>
                             </Fade>
                         </Col2Right>
                     </Box>

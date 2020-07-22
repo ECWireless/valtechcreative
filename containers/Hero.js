@@ -4,7 +4,7 @@ import Particles from 'react-particles-js'
 import ReactRotatingText from 'react-rotating-text'
 
 // Components
-import { Link } from '../components'
+import { CustomLink } from '../components'
 import { Box } from '../components/Boxes'
 import { H1, H2, P1 } from '../components/Typography'
 import { Container, Flex } from '../components/Containers'
@@ -61,20 +61,20 @@ const Hero = () => {
                 </Box>
                 <Flex>
                     <Box marginTop={60} marginRight={30}>
-                        <Link
+                        <CustomLink
                             href="https://github.com/ecwireless"
                             target="_blank" rel="noreferrer"
                         >
                             <HeroIcon style={{backgroundImage: 'url(./github-logo-invert.png)'}} />
-                        </Link>
+                        </CustomLink>
                     </Box>
                     <Box marginTop={60}>
-                        <Link
+                        <CustomLink
                             href="https://www.facebook.com/valtechcreative"
                             target="_blank" rel="noreferrer"
                         >
                             <HeroIcon style={{backgroundImage: 'url(./facebook-logo.png)'}} />
-                        </Link>
+                        </CustomLink>
                     </Box>
                 </Flex>
             </Container>

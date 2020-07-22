@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import Head from 'next/head'
+import styled, { css } from 'styled-components'
+import respondTo from '../components/Breakpoints'
 
 // Containers
 import NavBar from '../containers/NavBar'
@@ -32,14 +34,19 @@ const index = () => {
                 <Hero />
                 <Box marginTop={350}>
                     <Background1>
+                        <HashTransforms id="features" transform={-100} />
                         <Features />
+                        <HashTransforms id="work" transform={-100} />
                         <Work />
                     </Background1>
                 </Box>
+                <HashTransforms id="about" transform={0} />
                 <About />
                 <Box marginTop={350}>
                     <Background2>
+                        <HashTransforms id="tools" transform={-200} />
                         <Tools />
+                        <HashTransforms id="contact" transform={-100} />
                         <Contact />
                     </Background2>
                 </Box>
@@ -48,5 +55,19 @@ const index = () => {
         </>
     )
 }
+
+const HashTransforms = styled.div`
+    ${props => css`
+        transform: translateY(${props.transform * .5}px);
+
+        ${respondTo.xs`
+            transform: translateY(${props.transform * .7}px);
+        `}
+
+        ${respondTo.sm`
+            transform: translateY(${props.transform}px);
+        `}
+    `}
+`
 
 export default index

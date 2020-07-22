@@ -131,7 +131,7 @@ export const Line = styled.div`
     `};
 `
 
-export const Link = styled.a`
+export const CustomLink = styled.a`
     display: inline-block;
     text-decoration: none;
     transition: color .3s ease;

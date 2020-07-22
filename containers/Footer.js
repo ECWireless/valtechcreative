@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import respondTo from '../components/Breakpoints'
 
 // Components
-import { Link } from '../components'
+import { CustomLink } from '../components'
 import { Container, Flex } from '../components/Containers'
 import { P2 } from '../components/Typography'
 import { Box } from '../components/Boxes'
@@ -15,18 +15,18 @@ const Footer = () => {
                     <Container>
                         <Flex align={'center'} justify={'space-around'} wrap={'wrap'}>
                             <FooterIcon style={{backgroundImage: 'url(./Valtech-Logo.png)'}} />
-                            <Link
+                            <CustomLink
                                 href="https://github.com/ecwireless"
                                 target="_blank" rel="noreferrer"
                             >
                                 <FooterIcon style={{backgroundImage: 'url(./github-logo-invert.png)'}} />
-                            </Link>
-                            <Link
+                            </CustomLink>
+                            <CustomLink
                                 href="https://www.facebook.com/valtechcreative"
                                 target="_blank" rel="noreferrer"
                             >
                                 <FooterIcon style={{backgroundImage: 'url(./facebook-logo.png)'}} />
-                            </Link>
+                            </CustomLink>
                             <P2>Elliott@ValtechCreative.com</P2>
                         </Flex>
                     </Container>

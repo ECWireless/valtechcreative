@@ -1,7 +1,7 @@
 import Fade from 'react-reveal/Fade';
 
 // Components
-import { Line, Link } from '../components'
+import { Line, CustomLink } from '../components'
 import { Box } from '../components/Boxes'
 import { Container, Flex } from '../components/Containers'
 import { H1, H2, P2 } from '../components/Typography'
@@ -37,12 +37,12 @@ const About = () => {
                     </Fade>
                     <Fade bottom ssrFadeout>
                         <Box marginTop={30}>
-                            <P2>Powered by <Link
+                            <P2>Powered by <CustomLink
                                 href="https://lace.vercel.app/"
                                 color={'#fff'}
                                 hover={'#FAF30E'}
                                 target="_blank" rel="noreferrer"
-                            >Lace</Link>.</P2>
+                            >Lace</CustomLink>.</P2>
                         </Box>
                     </Fade>
                 </Container>
