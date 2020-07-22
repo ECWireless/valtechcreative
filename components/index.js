@@ -97,8 +97,8 @@ export const Img = styled.img`
 
 export const Line = styled.div`
     ${props => css`
-        width: ${props.width * .8}px;
-        height: ${props.height * .5}px;
+        width: ${props.width * .6}px;
+        height: ${props.height * .6}px;
         margin: 0 auto;
 
         ${respondTo.xs`
