@@ -159,4 +159,8 @@ export const P2 = styled.p`
         text-align: ${props.align};
         color: ${props.color};
     `};
+
+    ${props => props.color === 'blue' && css`
+        color: #1062AD;
+    `};
 `

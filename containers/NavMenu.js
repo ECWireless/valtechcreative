@@ -21,13 +21,28 @@ const NavMenu = (props) => {
                             <Fade bottom ssrFadeout>
                                 <NavBox>
                                     <NavFlex>
-                                        <NavBarTop>Logo and Company Name</NavBarTop>
+                                        <NavBarTop>
+                                            <NavTopFlex>
+                                                <NavValtech style={{backgroundImage: 'url(./Valtech-Logo.png)'}} />
+                                                <P2 color={'blue'}>Valtech Creative</P2>
+                                            </NavTopFlex>
+                                        </NavBarTop>
                                         <NavListContainer>
-                                            <P1 uppercase color={'blue'}>Features</P1>
-                                            <P1 uppercase color={'blue'}>Work</P1>
-                                            <P1 uppercase color={'blue'}>About</P1>
-                                            <P1 uppercase color={'blue'}>Tools</P1>
-                                            <P1 uppercase color={'blue'}>Contact</P1>
+                                            <NavListItem>
+                                                <P1 uppercase color={'inherit'} align={'center'}>Features</P1>
+                                            </NavListItem>
+                                            <NavListItem>
+                                                <P1 uppercase color={'inherit'} align={'center'}>Work</P1>
+                                            </NavListItem>
+                                            <NavListItem>
+                                                <P1 uppercase color={'inherit'} align={'center'}>About</P1>
+                                            </NavListItem>
+                                            <NavListItem>
+                                                <P1 uppercase color={'inherit'} align={'center'}>Tools</P1>
+                                            </NavListItem>
+                                            <NavListItem>
+                                                <P1 uppercase color={'inherit'} align={'center'}>Contact</P1>
+                                            </NavListItem>
                                         </NavListContainer>
                                     </NavFlex>
                                     <NavBarBottom>
@@ -187,7 +202,7 @@ const NavListContainer = styled.div`
     width: 100%;
     height: 210px;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     padding: 20px 0;
 
     ${respondTo.xs`
@@ -198,6 +213,20 @@ const NavListContainer = styled.div`
         width: 50%;
         height: auto;
     `}
+`
+
+const NavListItem = styled.div`
+    background: #fff;
+    width: 100%;
+    color: #1062AD;
+    padding: 10px 0;
+    transition: all .3s ease;
+
+    &:hover {
+        color: #fff;
+        background: #1062AD;
+        cursor: pointer;
+    }
 `
 
 const NavBarTop = styled.div`
@@ -251,6 +280,49 @@ const NavIcon = styled.div`
         `}
 
         ${respondTo.lg`
+        `}
+    `};
+`
+
+const NavTopFlex = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    ${respondTo.sm`
+        flex-direction: column;
+    `}
+`
+
+const NavValtech = styled.div`
+    ${props => css`
+        width: 30px;
+        height: 30px;
+        margin-bottom: 0;
+        margin-right: 10px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        ${respondTo.xs`
+        `}
+        
+        ${respondTo.sm`
+            width: 120px;
+            height: 120px;
+            margin-bottom: 30px;
+        `}
+
+        ${respondTo.md`
+            width: 150px;
+            height: 150px;
+        `}
+
+        ${respondTo.lg`
+            width: 200px;
+            height: 200px;
         `}
     `};
 `
