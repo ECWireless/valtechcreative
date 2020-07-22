@@ -122,12 +122,13 @@ export const P1 = styled.p`
         text-transform: uppercase;
     `};
 
-    ${props => props.color === 'blue' && css`
-        color: #1062AD;
-    `};
-
     ${props => css`
         text-align: ${props.align};
+        color: ${props.color};
+    `};
+
+    ${props => props.color === 'blue' && css`
+        color: #1062AD;
     `};
 `
 
@@ -156,5 +157,6 @@ export const P2 = styled.p`
 
     ${props => css`
         text-align: ${props.align};
+        color: ${props.color};
     `};
 `

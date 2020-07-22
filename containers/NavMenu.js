@@ -3,8 +3,10 @@ import respondTo from '../components/Breakpoints'
 import Fade from 'react-reveal/Fade';
 
 // Components
-import { Container } from '../components/Containers'
-import { P1 } from '../components/Typography'
+import { Link } from '../components'
+import { Box } from '../components/Boxes'
+import { Container, Flex } from '../components/Containers'
+import { P1, P2 } from '../components/Typography'
 
 const NavMenu = (props) => {
     return (
@@ -29,7 +31,27 @@ const NavMenu = (props) => {
                                         </NavListContainer>
                                     </NavFlex>
                                     <NavBarBottom>
-                                        Logos
+                                        <Flex wrap={'wrap'} align={'center'} justify={'center'} style={{height: '100%'}}>
+                                            <Box>
+                                                <Link
+                                                        href="https://github.com/ecwireless"
+                                                        target="_blank" rel="noreferrer"
+                                                    >
+                                                        <NavIcon style={{backgroundImage: 'url(./github-logo.png)'}} />
+                                                    </Link>
+                                                </Box>
+                                            <Box marginLeft={20}>
+                                                <Link
+                                                    href="https://www.facebook.com/valtechcreative"
+                                                    target="_blank" rel="noreferrer"
+                                                >
+                                                    <NavIcon style={{backgroundImage: 'url(./facebook-logo.png)'}} />
+                                                </Link>
+                                            </Box>
+                                            <Box marginLeft={40}>
+                                                <P2 color={'#000'}>Elliott@ValtechCreative.com</P2>
+                                            </Box>
+                                        </Flex>
                                     </NavBarBottom>
                                 </NavBox>
                             </Fade>
@@ -163,10 +185,14 @@ const NavListContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 260px;
+    height: 210px;
     align-items: center;
     justify-content: space-around;
     padding: 20px 0;
+
+    ${respondTo.xs`
+        height: 260px;
+    `}
 
     ${respondTo.sm`
         width: 50%;
@@ -190,13 +216,43 @@ const NavBarTop = styled.div`
 
 const NavBarBottom = styled.div`
     width: 100%;
-    height: 60px;
+    height: 70px;
     background: transparent;
     border-top: 2px solid #1062AD;
+
+    ${respondTo.xs`
+        height: 90px;
+    `}
 
     ${respondTo.sm`
         height: 15%;
     `}
+`
+
+const NavIcon = styled.div`
+    ${props => css`
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        ${respondTo.xs`
+            width: 30px;
+            height: 30px;
+        `}
+        
+        ${respondTo.sm`
+        `}
+
+        ${respondTo.md`
+            width: 50px;
+            height: 50px;
+        `}
+
+        ${respondTo.lg`
+        `}
+    `};
 `
 
 export default NavMenu
