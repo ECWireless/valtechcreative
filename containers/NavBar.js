@@ -5,9 +5,9 @@ import respondTo from '../components/Breakpoints'
 import { Box3 } from '../components/Boxes'
 import { Flex } from '../components/Containers'
 
-const NavBar = () => {
+const NavBar = (props) => {
     return (
-        <SandWhichContainer>
+        <SandWhichContainer onClick={() => props.setClosed(false)}>
             <Flex direction={'column'} justify={'space-between'}>
                 <Box3>
                     <SandwhichLine width={35} height={4} color={'white'} />
