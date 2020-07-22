@@ -4,6 +4,7 @@ import Fade from 'react-reveal/Fade';
 
 // Components
 import { Container } from '../components/Containers'
+import { P1 } from '../components/Typography'
 
 const NavMenu = (props) => {
     return (
@@ -15,16 +16,23 @@ const NavMenu = (props) => {
                         <CloseLine width={40} height={3} position={'right'} />
                     </CloseContainer>
                         <Container style={{justifyContent: 'center', alignItems: 'center'}}>
-                    <Fade bottom ssrFadeout>
-                            <NavBox>
-                                <p>Logo and Company Name</p>
-                                <p>Features</p>
-                                <p>Work</p>
-                                <p>About</p>
-                                <p>Tools</p>
-                                <p>Contact</p>
-                            </NavBox>
-                    </Fade>
+                            <Fade bottom ssrFadeout>
+                                <NavBox>
+                                    <NavFlex>
+                                        <NavBarTop>Logo and Company Name</NavBarTop>
+                                        <NavListContainer>
+                                            <P1 uppercase color={'blue'}>Features</P1>
+                                            <P1 uppercase color={'blue'}>Work</P1>
+                                            <P1 uppercase color={'blue'}>About</P1>
+                                            <P1 uppercase color={'blue'}>Tools</P1>
+                                            <P1 uppercase color={'blue'}>Contact</P1>
+                                        </NavListContainer>
+                                    </NavFlex>
+                                    <NavBarBottom>
+                                        Logos
+                                    </NavBarBottom>
+                                </NavBox>
+                            </Fade>
                         </Container>
                 </NavBackground>
             </Fade>
@@ -133,10 +141,61 @@ const NavBox = styled.div`
     border: 2px solid #1062AD;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     margin: 0 auto;
 
     ${respondTo.xs`
         height: 80vh;
+    `}
+`
+
+const NavFlex = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    ${respondTo.sm`
+        flex-direction: row;
+        height: 85%
+    `}
+`
+
+const NavListContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 260px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0;
+
+    ${respondTo.sm`
+        width: 50%;
+        height: auto;
+    `}
+`
+
+const NavBarTop = styled.div`
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border-bottom: 2px solid #1062AD;
+
+    ${respondTo.sm`
+        width: 50%;
+        height: auto;
+        border-right: 2px solid #1062AD;
+        border-bottom: none;
+    `}
+`
+
+const NavBarBottom = styled.div`
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border-top: 2px solid #1062AD;
+
+    ${respondTo.sm`
+        height: 15%;
     `}
 `
 

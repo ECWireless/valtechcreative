@@ -122,6 +122,10 @@ export const P1 = styled.p`
         text-transform: uppercase;
     `};
 
+    ${props => props.color === 'blue' && css`
+        color: #1062AD;
+    `};
+
     ${props => css`
         text-align: ${props.align};
     `};
