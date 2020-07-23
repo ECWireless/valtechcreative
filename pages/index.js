@@ -21,6 +21,13 @@ import { Box } from '../components/Boxes'
 const index = () => {
     const [closed, setClosed] = useState(true)
 
+    function scrollToTop() {
+        window.scroll({
+            top: 0,
+            behavior: 'smooth',
+        });
+    }
+    
     return (
         <>
             <Head>
@@ -50,7 +57,7 @@ const index = () => {
                         <Contact />
                     </Background2>
                 </Box>
-                <Footer />
+                <Footer scrollToTop={scrollToTop} />
             </main>
         </>
     )

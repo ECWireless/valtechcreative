@@ -39,7 +39,7 @@ const Work = () => {
                         <Col2Right align={'center'} justify={'center'}>
                             <Fade delay={500} ssrFadeout>
                                 <CustomLink
-                                    href="https://www.parishdigital.com/"
+                                    href="https://abecares.now.sh/"
                                     target="_blank" rel="noreferrer"
                                     width={400} height={400}
                                 >
@@ -56,7 +56,7 @@ const Work = () => {
                         <Col2Left align={'center'} justify={'center'}>
                             <Fade ssrFadeout>
                                 <CustomLink
-                                    href="https://www.parishdigital.com/"
+                                    href="https://app.studiome.me/"
                                     target="_blank" rel="noreferrer"
                                     width={400} height={400}
                                 >
@@ -71,7 +71,7 @@ const Work = () => {
                         <Col2Right align={'center'} justify={'center'}>
                             <Fade delay={500} ssrFadeout>
                                 <CustomLink
-                                    href="https://www.parishdigital.com/"
+                                    href="https://simprodos.com/"
                                     target="_blank" rel="noreferrer"
                                     width={400} height={400}
                                 >

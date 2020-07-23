@@ -7,14 +7,14 @@ import { Container, Flex } from '../components/Containers'
 import { P2 } from '../components/Typography'
 import { Box } from '../components/Boxes'
 
-const Footer = () => {
+const Footer = (props) => {
     return (
         <>
             <footer>
                 <Box paddingTop={100} paddingBottom={100}>
                     <Container>
                         <Flex align={'center'} justify={'space-around'} wrap={'wrap'}>
-                            <FooterIcon style={{backgroundImage: 'url(./Valtech-Logo.png)'}} />
+                            <FooterIcon onClick={props.scrollToTop} style={{backgroundImage: 'url(./Valtech-Logo.png)'}} />
                             <CustomLink
                                 href="https://github.com/ecwireless"
                                 target="_blank" rel="noreferrer"
@@ -44,6 +44,10 @@ const FooterIcon = styled.div`
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+
+        &:hover {
+            cursor: pointer;
+        }
 
         ${respondTo.xs`
             width: 50px;
