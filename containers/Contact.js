@@ -16,7 +16,7 @@ const Contact = () => {
     const [email, setEmail] = useState('')
     const [number, setNumber] = useState('')
     const [message, setMessage] = useState('')
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
     const [submitted, setSubmitted] = useState(false)
     const [success, setSuccess] = useState(false)
 
