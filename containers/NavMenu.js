@@ -27,7 +27,9 @@ const NavMenu = (props) => {
                                                 <Link href="/">
                                                     <NavValtech onClick={() => props.setClosed(true)} style={{backgroundImage: 'url(./Valtech-Logo.png)'}} />
                                                 </Link>
-                                                <P2 color={'blue'}>Valtech Creative</P2>
+                                                <Link href="/">
+                                                    <P2 onClick={() => props.setClosed(true)} color={'blue'}>Valtech Creative</P2>
+                                                </Link>
                                             </NavTopFlex>
                                         </NavBarTop>
                                         <NavListContainer>
