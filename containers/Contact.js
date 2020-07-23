@@ -8,12 +8,17 @@ import { Container, Flex } from '../components/Containers'
 import { Form, Input, Label, TextArea } from '../components/Forms'
 import { H1 } from '../components/Typography'
 import { Box } from '../components/Boxes'
+import Snackbar from '../components/Snackbar'
+import Spinner from '../components/Spinner'
 
 const Contact = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [number, setNumber] = useState('')
     const [message, setMessage] = useState('')
+    const [loading, setLoading] = useState(false)
+    const [submitted, setSubmitted] = useState(false)
+    const [success, setSuccess] = useState(false)
 
     function onNameChange(e) { setName(e.target.value) }
     function onEmailChange(e) { setEmail(e.target.value) }
@@ -34,8 +39,53 @@ const Contact = () => {
     function onMessageChange(e) { setMessage(e.target.value) }
 
     function onSubmit(e) {
-        e.preventDefault()
-        console.log(name, email, number, message)
+        e.preventDefault();
+        console.log('submit')
+        let state = {
+            name,
+            email,
+            number,
+            message,
+        }
+        
+        setLoading(true)
+        fetch('https://valtechcreative-backend.herokuapp.com/mail',{
+            method: "POST",
+            body: JSON.stringify(state),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+        }).then(
+            (response) => (response.json())
+        ).then((response)=>{
+            if (response.status === 'success'){
+                resetForm();
+                setSubmitted(true)
+                setSuccess(true)
+                setLoading(false)
+            } else if(response.status === 'fail'){
+                setSubmitted(true)
+                setSuccess(false)
+                setLoading(false)
+            }
+        })
+        .catch(() => {
+            setSubmitted(true)
+            setSuccess(false)
+            setLoading(false)
+        })
+    }
+
+    function onCloseSnackbar() {
+        setSubmitted(false)
+    }
+
+    function resetForm() {
+        setName('')
+        setEmail('')
+        setNumber('')
+        setMessage('')
     }
 
     return (
@@ -60,10 +110,13 @@ const Contact = () => {
                         <Input required marginTop={10} type="tel" id="contact__number" onChange={onNumberChange} value={number} />
                         <Label marginTop={50} htmlFor="contact__message">Message:</Label>
                         <TextArea required marginTop={10} id="contact__message" onChange={onMessageChange} value={message} />
-                        <Button marginTop={50} type="submit">Submit</Button>
+                        <Button marginTop={50} type="submit">
+                            {loading ? <Spinner /> : 'Submit'}
+                        </Button>
                     </Form>
                 </Box>
             </Container>
+            { submitted && <Snackbar success={success} onCloseSnackbar={onCloseSnackbar} /> }
         </>
     )
 }
