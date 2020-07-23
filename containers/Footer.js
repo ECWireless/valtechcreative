@@ -25,7 +25,7 @@ const Footer = () => {
                                 href="https://www.facebook.com/valtechcreative"
                                 target="_blank" rel="noreferrer"
                             >
-                                <FooterIcon style={{backgroundImage: 'url(./facebook-logo.png)'}} />
+                                <FooterIcon style={{backgroundImage: 'url(./facebook-logo-white.png)'}} />
                             </CustomLink>
                             <P2>Elliott@ValtechCreative.com</P2>
                         </Flex>

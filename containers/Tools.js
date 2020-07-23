@@ -3,7 +3,7 @@ import respondTo from '../components/Breakpoints'
 import Fade from 'react-reveal/Fade';
 
 // Components
-import { Card, Transform } from '../components'
+import { Card, CustomLink, Transform } from '../components'
 import { Box } from '../components/Boxes'
 import { Container, Flex } from '../components/Containers'
 import { H1, P2 } from '../components/Typography'
@@ -21,12 +21,24 @@ const Tools = () => {
                             </Fade>
                             <Fade delay={1000} ssrFadeout>
                                 <Flex wrap={"wrap"} justify={'space-between'} align={'center'}>
-                                    <ToolIcon style={{backgroundImage: 'url(./github-logo.png)'}} />
-                                    <ToolIcon style={{backgroundImage: 'url(./react-logo.png)'}} />
-                                    <ToolIcon style={{backgroundImage: 'url(./nextjs-logo.png)'}} />
-                                    <ToolIcon style={{backgroundImage: 'url(./sanity-logo.png)'}} />
-                                    <ToolIcon style={{backgroundImage: 'url(./vercel-logo.png)'}} />
-                                    <ToolIcon style={{backgroundImage: 'url(./aragon-logo.png)'}} />
+                                    <CustomLink href="https://github.com/" target="_blank" rel="noreferrer">
+                                        <ToolIcon style={{backgroundImage: 'url(./github-logo.png)'}} />
+                                    </CustomLink>
+                                    <CustomLink href="https://reactjs.org/" target="_blank" rel="noreferrer">
+                                        <ToolIcon style={{backgroundImage: 'url(./react-logo.png)'}} />
+                                    </CustomLink>
+                                    <CustomLink href="https://nextjs.org/" target="_blank" rel="noreferrer">
+                                        <ToolIcon style={{backgroundImage: 'url(./nextjs-logo.png)'}} />
+                                    </CustomLink>
+                                    <CustomLink href="https://www.sanity.io/" target="_blank" rel="noreferrer">
+                                        <ToolIcon style={{backgroundImage: 'url(./sanity-logo.png)'}} />
+                                    </CustomLink>
+                                    <CustomLink href="https://vercel.com/" target="_blank" rel="noreferrer">
+                                        <ToolIcon style={{backgroundImage: 'url(./vercel-logo.png)'}} />
+                                    </CustomLink>
+                                    <CustomLink href="https://aragon.org/" target="_blank" rel="noreferrer">
+                                        <ToolIcon style={{backgroundImage: 'url(./aragon-logo.png)'}} />
+                                    </CustomLink>
                                 </Flex>
                             </Fade>
                         </Box>

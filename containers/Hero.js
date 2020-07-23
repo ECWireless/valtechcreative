@@ -73,7 +73,7 @@ const Hero = () => {
                             href="https://www.facebook.com/valtechcreative"
                             target="_blank" rel="noreferrer"
                         >
-                            <HeroIcon style={{backgroundImage: 'url(./facebook-logo.png)'}} />
+                            <HeroIcon style={{backgroundImage: 'url(./facebook-logo-white.png)'}} />
                         </CustomLink>
                     </Box>
                 </Flex>
