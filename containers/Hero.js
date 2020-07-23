@@ -57,7 +57,7 @@ const Hero = () => {
                     </Box>
                 </Flex>
                 <Box marginTop={60}>
-                    <P1 id="hero__paragraph1">Specializing in custom Websites, Web Apps, and Native Applications</P1>
+                    <P1 id="hero__paragraph1">Specializing in custom Websites, Web Apps, and Native Applications.</P1>
                 </Box>
                 <Flex>
                     <Box marginTop={60} marginRight={30}>

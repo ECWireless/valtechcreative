@@ -22,7 +22,7 @@ const About = () => {
                     </Flex>
                     <Fade bottom ssrFadeout>
                         <Box marginTop={100}>
-                            <H2>Valtech is a distributed company built around collaboration</H2>
+                            <H2>Valtech is a distributed company built around collaboration.</H2>
                         </Box>
                     </Fade>
                     <Fade bottom ssrFadeout>

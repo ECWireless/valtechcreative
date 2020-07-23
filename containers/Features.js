@@ -69,7 +69,7 @@ const Features = () => {
                                         </Box3>
                                     </Box3>
                                     <Box3 width={350} marginTop={30}>
-                                        <P2 align={'center'}>Custom CMS configuration is available for any projects that need consistently updated or maintained content</P2>
+                                        <P2 align={'center'}>Custom CMS configuration is available for any projects that need consistently updated or maintained content.</P2>
                                     </Box3>
                                 </Fade>
                             </Col2Left>
