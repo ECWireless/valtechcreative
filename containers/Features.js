@@ -85,7 +85,7 @@ const Features = () => {
                                         </Box3>
                                     </Box3>
                                     <Box3 width={350} marginTop={30}>
-                                        <P2 align={'center'}>Our websites are never shipped without a 100% score from Google Lighthouse.</P2>
+                                        <P2 align={'center'}>Our websites are always shipped with a Google Lighthouse score above 95%.</P2>
                                     </Box3>
                                 </Fade>
                             </Col2Right>
