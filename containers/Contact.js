@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Fade from 'react-reveal/Fade';
+import axios from 'axios'
 
 // Components
 import { Line } from '../components'
@@ -47,34 +48,43 @@ const Contact = () => {
             number,
             message,
         }
+
+        axios({
+            method: 'POST',
+            url: 'https://formspree.io/xzbjnwzp',
+            data: 'testing'
+        })
+        .catch(error => {
+            console.log('something went wrong...')
+        })
         
-        setLoading(true)
-        fetch('https://valtechcreative-backend.herokuapp.com/mail',{
-            method: "POST",
-            body: JSON.stringify(state),
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-        }).then(
-            (response) => (response.json())
-        ).then((response)=>{
-            if (response.status === 'success'){
-                resetForm();
-                setSubmitted(true)
-                setSuccess(true)
-                setLoading(false)
-            } else if(response.status === 'fail'){
-                setSubmitted(true)
-                setSuccess(false)
-                setLoading(false)
-            }
-        })
-        .catch(() => {
-            setSubmitted(true)
-            setSuccess(false)
-            setLoading(false)
-        })
+        // setLoading(true)
+        // fetch('https://valtechcreative-backend.herokuapp.com/mail',{
+        //     method: "POST",
+        //     body: JSON.stringify(state),
+        //     headers: {
+        //         'Accept': 'application/json',
+        //         'Content-Type': 'application/json'
+        //     },
+        // }).then(
+        //     (response) => (response.json())
+        // ).then((response)=>{
+        //     if (response.status === 'success'){
+        //         resetForm();
+        //         setSubmitted(true)
+        //         setSuccess(true)
+        //         setLoading(false)
+        //     } else if(response.status === 'fail'){
+        //         setSubmitted(true)
+        //         setSuccess(false)
+        //         setLoading(false)
+        //     }
+        // })
+        // .catch(() => {
+        //     setSubmitted(true)
+        //     setSuccess(false)
+        //     setLoading(false)
+        // })
     }
 
     function onCloseSnackbar() {
