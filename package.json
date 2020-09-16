@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ECWireless/valtechcreative#readme",
   "dependencies": {
+    "@sendgrid/mail": "^7.2.5",
     "axios": "^0.20.0",
     "babel-plugin-styled-components": "^1.10.7",
     "next": "^9.4.4",
