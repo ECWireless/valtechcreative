@@ -7,7 +7,7 @@ import { Flex } from '../components/Containers'
 
 const NavBar = (props) => {
     return (
-        <SandWhichContainer onClick={() => props.setClosed(false)}>
+        <SandWhichContainer onClick={() => props.setSidebar(true)}>
             <Flex direction={'column'} justify={'space-between'}>
                 <Box3>
                     <SandwhichLine width={35} height={4} color={'white'} />

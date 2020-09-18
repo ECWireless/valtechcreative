@@ -5,6 +5,7 @@ import respondTo from '../components/Breakpoints'
 
 // Containers
 import NavBar from '../containers/NavBar'
+import Sidebar from '../components/Sidebar'
 import NavMenu from '../containers/NavMenu'
 import Hero from '../containers/Hero'
 import Features from '../containers/Features'
@@ -19,7 +20,7 @@ import { Background1, Background2 } from '../components'
 import { Box } from '../components/Boxes'
 
 const index = () => {
-    const [closed, setClosed] = useState(true)
+    const [sidebar, setSidebar] = useState(false)
 
     function scrollToTop() {
         window.scroll({
@@ -49,8 +50,10 @@ const index = () => {
                 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"></link>
             </Head>
             <main>
-                <NavBar setClosed={setClosed} />
-                {!closed && <NavMenu setClosed={setClosed} />}
+                <Backdrop open={sidebar} onClick={() => setSidebar(false)} />
+                <Sidebar sidebar={sidebar} setSidebar={setSidebar} />
+                <NavBar setSidebar={setSidebar} />
+                {/* {!closed && <NavMenu setSidebar={setSidebar} />} */}
                 <Hero />
                 <Box marginTop={350}>
                     <Background1>
@@ -75,6 +78,23 @@ const index = () => {
         </>
     )
 }
+
+const Backdrop = styled.div`
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	background: #000;
+	z-index: -1;
+	opacity: 0;
+	transition: all .5s ease;
+
+	${props => props.open && css`
+		z-index: 999;
+		opacity: .8;
+	`}
+`
 
 const HashTransforms = styled.div`
     ${props => css`

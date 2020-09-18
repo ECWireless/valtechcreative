@@ -164,3 +164,36 @@ export const P2 = styled.p`
         color: #1062AD;
     `};
 `
+
+export const P3 = styled.p`
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #fff;
+
+    ${respondTo.sm`
+        font-weight: 400;
+        font-size: 16px;
+    `}
+
+    ${respondTo.md`
+        font-size: 18px;
+    `}
+
+    ${respondTo.lg`
+        font-size: 20px;
+    `}
+
+    ${props => props.uppercase && css`
+        text-transform: uppercase;
+    `};
+
+    ${props => css`
+        text-align: ${props.align};
+        color: ${props.color};
+    `};
+
+    ${props => props.color === 'blue' && css`
+        color: #1062AD;
+    `};
+`
