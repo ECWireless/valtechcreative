@@ -8,6 +8,7 @@ import NavBar from '../containers/NavBar'
 import Sidebar from '../components/Sidebar'
 import NavMenu from '../containers/NavMenu'
 import Hero from '../containers/Hero'
+import Subscriptions from '../containers/Subscriptions'
 import Features from '../containers/Features'
 import Work from '../containers/Work'
 import About from '../containers/About'
@@ -55,6 +56,8 @@ const index = () => {
                 <NavBar setSidebar={setSidebar} />
                 {/* {!closed && <NavMenu setSidebar={setSidebar} />} */}
                 <Hero />
+                <HashTransforms id="subscriptions" transform={50} />
+                <Subscriptions />
                 <Box marginTop={350}>
                     <Background1>
                         <HashTransforms id="features" transform={-100} />

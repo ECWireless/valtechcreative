@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import respondTo from '../components/Breakpoints'
 import Particles from 'react-particles-js'
 import ReactRotatingText from 'react-rotating-text'
@@ -83,29 +83,27 @@ const Hero = () => {
 }
 
 const HeroIcon = styled.div`
-    ${props => css`
-        width: 30px;
-        height: 30px;
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 
-        ${respondTo.xs`
-            width: 40px;
-            height: 40px;
-        `}
-        
-        ${respondTo.sm`
-        `}
+    ${respondTo.xs`
+        width: 40px;
+        height: 40px;
+    `}
+    
+    ${respondTo.sm`
+    `}
 
-        ${respondTo.md`
-            width: 60px;
-            height: 60px;
-        `}
+    ${respondTo.md`
+        width: 60px;
+        height: 60px;
+    `}
 
-        ${respondTo.lg`
-        `}
-    `};
+    ${respondTo.lg`
+    `}
 `
 
 export default Hero

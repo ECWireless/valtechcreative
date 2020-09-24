@@ -37,6 +37,13 @@ const Sidebar = ({
                     </CloseContainer>
                 </Flex>
             </SidebarTop>
+            <Link href="#subscriptions">
+                <SidebarOption onClick={onSelctOption.bind(this, '/#subscriptions')} active={route === '/#subscriptions' ? true : false}>
+                    <Flex justify={'flex-start'} align={'center'} style={{ height: '100%' }}>
+                        <P3 style={{marginLeft: '2rem'}} color={colors.white}>Subscriptions</P3>
+                    </Flex>
+                </SidebarOption>
+            </Link>
             <Link href="#features">
                 <SidebarOption onClick={onSelctOption.bind(this, '/#features')} active={route === '/#features' ? true : false}>
                     <Flex justify={'flex-start'} align={'center'} style={{ height: '100%' }}>

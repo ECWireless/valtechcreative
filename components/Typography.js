@@ -27,6 +27,14 @@ export const H1 = styled.h1`
         text-transform: uppercase;
     `};
 
+    ${props => props.center && css`
+        text-align: center;
+    `};
+
+    ${props => props.color && css`
+        color: ${props.color}
+    `};
+
     ${props => css`
         text-align: ${props.align};
         color: ${props.color};
@@ -59,6 +67,14 @@ export const H2 = styled.h2`
         text-transform: uppercase;
     `};
 
+    ${props => props.center && css`
+        text-align: center;
+    `};
+
+    ${props => props.color && css`
+        color: ${props.color}
+    `};
+
     ${props => css`
         text-align: ${props.align};
     `};
@@ -88,6 +104,53 @@ export const H3 = styled.h3`
 
     ${props => props.uppercase && css`
         text-transform: uppercase;
+    `};
+
+    ${props => props.center && css`
+        text-align: center;
+    `};
+
+    ${props => props.color && css`
+        color: ${props.color}
+    `};
+
+    ${props => css`
+        text-align: ${props.align};
+    `};
+`
+
+export const H4 = styled.h3`
+    font-size: 22px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    color: #FFF;
+
+    ${respondTo.xs`
+        font-size: 24px;
+    `}
+    
+    ${respondTo.sm`
+        font-size: 28px;
+    `}
+
+    ${respondTo.md`
+        font-size: 34px;
+    `}
+
+    ${respondTo.lg`
+        font-size: 38px;
+	`}
+
+    ${props => props.uppercase && css`
+        text-transform: uppercase;
+    `};
+
+    ${props => props.center && css`
+        text-align: center;
+    `};
+
+    ${props => props.color && css`
+        color: ${props.color}
     `};
 
     ${props => css`
@@ -127,6 +190,14 @@ export const P1 = styled.p`
         color: ${props.color};
     `};
 
+    ${props => props.center && css`
+        text-align: center;
+    `};
+
+    ${props => props.color && css`
+        color: ${props.color}
+    `};
+
     ${props => props.color === 'blue' && css`
         color: #1062AD;
     `};
@@ -160,6 +231,14 @@ export const P2 = styled.p`
         color: ${props.color};
     `};
 
+    ${props => props.center && css`
+        text-align: center;
+    `};
+
+    ${props => props.color && css`
+        color: ${props.color}
+    `};
+
     ${props => props.color === 'blue' && css`
         color: #1062AD;
     `};
@@ -188,9 +267,16 @@ export const P3 = styled.p`
         text-transform: uppercase;
     `};
 
-    ${props => css`
-        text-align: ${props.align};
-        color: ${props.color};
+    ${props => props.bold && css`
+        font-weight: bold !important;
+    `};
+
+    ${props => props.center && css`
+        text-align: center;
+    `};
+
+    ${props => props.color && css`
+        color: ${props.color}
     `};
 
     ${props => props.color === 'blue' && css`
