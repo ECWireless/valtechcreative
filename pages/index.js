@@ -61,7 +61,7 @@ const index = () => {
                 <Backdrop open={sidebar || model} onClick={onCloseAll} />
                 <Sidebar sidebar={sidebar} setSidebar={setSidebar} />
                 <NavBar setSidebar={setSidebar} />
-                {model && <Model />}
+                {model && <Model onCloseAll={onCloseAll} />}
                 {/* {!closed && <NavMenu setSidebar={setSidebar} />} */}
                 <Hero />
                 <HashTransforms id="subscriptions" transform={50} />

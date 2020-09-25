@@ -5,14 +5,14 @@ import Fade from 'react-reveal/Fade';
 // Components
 import { colors } from '../components/theme'
 import { Button } from '../components/Buttons'
-import { Container, Flex } from '../components/Containers'
-import { Form, Input, Label, TextArea } from '../components/Forms'
+import { Container } from '../components/Containers'
+import { Form, Input, Label, Select } from '../components/Forms'
 import { H3 } from '../components/Typography'
 import { Box } from '../components/Boxes'
 import Snackbar from '../components/Snackbar'
 import Spinner from '../components/Spinner'
 
-const Model = () => {
+const Model = ({ onCloseAll }) => {
 
     const [status, setStatus] = useState({
         submitted: false,
@@ -21,8 +21,9 @@ const Model = () => {
     })
     
     const [inputs, setInputs] = useState({
+        name: '',
         email: '',
-        message: ''
+        subscription: 'Personal',
     })
 
     const [snackbar, setSnackbar] = useState(false)
@@ -37,8 +38,7 @@ const Model = () => {
             setInputs({
                 name: '',
                 email: '',
-                phone: '',
-                message: ''
+                subscription: 'Personal',
             })
             setSnackbar(true)
         } else {
@@ -65,7 +65,7 @@ const Model = () => {
     const handleOnSubmit = async e => {
         e.preventDefault()
         setStatus(prevStatus => ({ ...prevStatus, submitting: true }))
-        const res = await fetch('/api/contact', {
+        const res = await fetch('/api/subscriptions', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -74,6 +74,7 @@ const Model = () => {
         })
         const text = await res.text()
         handleResponse(res.status, text)
+        onCloseAll()
     }
 
     const onCloseSnackbar = () => {
@@ -92,6 +93,12 @@ const Model = () => {
                         <Input required marginTop={10} type="text" id="name" onChange={handleOnChange} value={inputs.name} />
                         <Label marginTop={50} htmlFor="email">Email:</Label>
                         <Input required marginTop={10} type="email" id="email" onChange={handleOnChange} value={inputs.email} />
+                        <Label marginTop={50} htmlFor="subscription">Subscription Type:</Label>
+                        <Select required marginTop={10} id="subscription" onChange={handleOnChange} value={inputs.subscription}>
+                            <option value="personal">Personal</option>
+                            <option value="business">Business</option>
+                        </Select>
+
                         <Button marginTop={50} type="submit">
                             {!status.submitting
                                 ? !status.submitted

@@ -214,6 +214,94 @@ export const Input = styled.input`
         `};
 `
 
+export const Select = styled.select`
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #FFF;
+    width: 77%;
+    height: 60px;
+    margin: 0 auto;
+    padding: 0 15px;
+    background: #2a2a2a;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: all .5s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+
+    &:hover {
+        background: #000;
+    }
+
+    &:active {
+        background: #000;
+    }
+
+    &:focus {
+        background: #000;
+    }
+
+    ${respondTo.sm`
+        font-weight: 400;
+        font-size: 18px;
+    `}
+
+    ${respondTo.md`
+        font-size: 20px;
+    `}
+
+    ${respondTo.lg`
+        font-size: 24px;
+    `}
+
+    ${props => props.uppercase && css`
+        text-transform: uppercase;
+    `};
+
+    ${props => css`
+        text-align: ${props.align};
+    `};
+
+    ${props =>
+        css`
+            margin-top: ${props.marginTop * .4}px;
+            margin-bottom: ${props.marginBottom * .4}px;
+            margin-left: ${props.marginLeft * .4}px;
+            padding-left: ${props.paddingLeft * .4}px;
+            padding-right: ${props.paddingRight * .4}px;
+
+            ${respondTo.xs`
+                margin-top: ${props.marginTop * .45}px;
+                margin-bottom: ${props.marginBottom * .45}px;
+                margin-left: ${props.marginLeft * .45}px;
+                padding-left: ${props.paddingLeft * .45}px;
+                padding-right: ${props.paddingRight * .45}px;
+            `}
+            
+            ${respondTo.sm`
+                margin-top: ${props.marginTop * .7}px;
+                margin-bottom: ${props.marginBottom * .7}px;
+                margin-left: ${props.marginLeft * .7}px;
+                padding-left: ${props.paddingLeft * .7}px;
+                padding-right: ${props.paddingRight * .7}px;
+            `}
+
+            ${respondTo.md`
+                margin-top: ${props.marginTop}px;
+                margin-bottom: ${props.marginBottom}px;
+                margin-left: ${props.marginLeft}px;
+                padding-left: ${props.paddingLeft}px;
+                padding-right: ${props.paddingRight}px;
+            `}
+
+            ${respondTo.lg`
+            `}
+        `};
+`
+
 export const TextArea = styled.textarea`
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;

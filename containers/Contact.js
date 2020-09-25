@@ -95,7 +95,9 @@ const Contact = () => {
     })
     
     const [inputs, setInputs] = useState({
+        name: '',
         email: '',
+        phone: '',
         message: ''
     })
 
