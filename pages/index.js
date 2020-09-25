@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Head from 'next/head'
 import styled, { css } from 'styled-components'
 import respondTo from '../components/Breakpoints'
+import "scroll-behavior-polyfill";
 
 // Containers
 import NavBar from '../containers/NavBar'
