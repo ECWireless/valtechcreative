@@ -1,14 +1,16 @@
 import styled, { css } from 'styled-components'
+import Link from 'next/link'
 import Fade from 'react-reveal/Fade'
 import respondTo from '../components/Breakpoints'
 
 // Components
-import { colors, shadows } from '../components/theme'
+import { colors } from '../components/theme'
 import { Line } from '../components'
 import { Box } from '../components/Boxes'
+import { Button } from '../components/Buttons'
 import { SubscriptionCard } from '../components/Cards'
 import { Container, Flex, Col2, Col2Left, Col2Right } from '../components/Containers'
-import { H1, H4, P2, P3 } from '../components/Typography'
+import { H1, P1, P2 } from '../components/Typography'
 
 const Subscriptions = () => {
     return (
@@ -59,6 +61,14 @@ const Subscriptions = () => {
                             </Fade>
                         </Col2>
                     </Box>
+                    <Box marginBottom={50}>
+                        <P1 color={colors.white} center>Need a Web App or Native App?</P1>
+                    </Box>
+                    <Flex justify={'center'} align={'center'}>
+                        <Link href="#contact">
+                            <Button>Get a Custom Quote</Button>
+                        </Link>
+                    </Flex>
                 </Container>
             </Box>
         </>
@@ -92,12 +102,12 @@ const AccentContainer = styled.div`
 
     ${props => props.position === 'right' && css`
         right: 0;
-        bottom: 4rem;
+        bottom: 9rem;
         transform: translateX(16rem);
 
         ${respondTo.xs`
             right: 0;
-            bottom: 4rem;
+            bottom: 12rem;
             transform: translateX(13rem);
         `}
     `}

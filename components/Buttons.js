@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components'
 import respondTo from './Breakpoints'
 
 export const Button = styled.button`
-    width: 200px;
     height: 50px;
     margin: 0 auto;
     background-color: #fff;
@@ -11,6 +10,7 @@ export const Button = styled.button`
     color: #1062AD;
     border-radius: 5px;
     transition: all .5s ease;
+    padding: 0 2rem;
 
     &:hover {
         cursor: pointer;
