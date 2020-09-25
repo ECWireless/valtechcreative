@@ -15,6 +15,7 @@ export const SubscriptionCard = ({
     subscriptionCost,
     paymentCost,
     hoursPerMonth,
+    setModel,
 }) => {
     return (
         <CardContainer>
@@ -58,7 +59,7 @@ export const SubscriptionCard = ({
                     </Box>
                 </Box>
                 <Flex justify={'center'} align={'center'}>
-                    <ConnectButton>
+                    <ConnectButton onClick={() => setModel(true)}>
                         Connect with a developer
                     </ConnectButton>
                 </Flex>

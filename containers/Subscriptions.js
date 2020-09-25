@@ -12,7 +12,7 @@ import { SubscriptionCard } from '../components/Cards'
 import { Container, Flex, Col2, Col2Left, Col2Right } from '../components/Containers'
 import { H1, P1, P2 } from '../components/Typography'
 
-const Subscriptions = () => {
+const Subscriptions = ({ setModel }) => {
     return (
         <>
             <Box style={{position: 'relative', overflow: 'hidden'}} marginTop={200}>
@@ -44,6 +44,7 @@ const Subscriptions = () => {
                                         subscriptionCost={'$20'}
                                         paymentCost={'$50'}
                                         hoursPerMonth={'10'}
+                                        setModel={setModel}
                                     />
                                 </Col2Left>
                             </Fade>
@@ -56,6 +57,7 @@ const Subscriptions = () => {
                                         subscriptionCost={'$30'}
                                         paymentCost={'$100'}
                                         hoursPerMonth={'20'}
+                                        setModel={setModel}
                                     />
                                 </Col2Right>
                             </Fade>
