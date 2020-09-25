@@ -29,6 +29,7 @@
     "react-reveal": "^1.2.2",
     "react-rotating-text": "^1.4.1",
     "scroll-behavior-polyfill": "^2.0.13",
+    "smoothscroll-polyfill": "^0.4.4",
     "styled-components": "^5.1.1"
   }
 }
