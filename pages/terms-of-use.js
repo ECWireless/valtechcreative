@@ -44,7 +44,7 @@ const termsOfUse = () => {
                     <Box marginTop={75}>
                         <H1>Valtech Creative Terms of Use</H1>
                         <Box marginTop={25}>
-                            <P3>Last Updated: 10.06.09</P3>
+                            <P3>Last Updated: 10.06.20</P3>
                         </Box>
                     </Box>
 
@@ -72,13 +72,13 @@ const termsOfUse = () => {
                     </Box>
                     <ol>
                         <Box marginTop={25} marginLeft={50}>
-                            <LI>The Personal Website Subscription is only available for individuals who are using the site for non-commercial purposes, or who are using it for commercial purposes as a sole-proprietorship. Any other type of entity signing up for this subscription will be liable to immediate termination of services and cancellation (as outlined in section 6.3).</LI>
+                            <LI>The Personal Website Subscription is only available for individuals who are using the site for non-commercial purposes, or who are using it for commercial purposes as a sole-proprietorship. Any other type of entity signing up for this subscription will be liable to immediate termination of services and cancellation (as outlined in section 6.2 and 6.3).</LI>
                         </Box>
                         <Box marginTop={25} marginLeft={50}>
                             <LI>The cost of this subscription is $20/month (not including taxes), which will be billed within 24 hours after the website is deemed complete by both the Web Developer and the User, and will be due 30 days after billing date.</LI>
                         </Box>
                         <Box marginTop={25} marginLeft={50}>
-                            <LI>Before the subscription is billed, a one-time payment of $50 per page created will be charged to the User. This charge will not be a part of the monthly recurring payment.</LI>
+                            <LI>Before the subscription is billed, a one-time payment of $50 per page created will be charged to the User (e.g. a website with a Home, About, and Services page will require a one-time payment of $150). This charge will not be a part of the monthly recurring payment.</LI>
                         </Box>
                         <Box marginTop={25} marginLeft={50}>
                             <LI>Services included as part of the Personal Website Subscription are: 1) Covered monthly hosting costs of website backend and CMS, 2) covered monthly hosting costs for website frontend, 3) 10 hours-worth of changes to any pages that already exist on the site (as changes are outlined in 2.3), 4) free technical maintenance, 5) 24/7 customer support, 6) and a rate of $50 per page for any additional pages requested after subscription has officially begun.</LI>
@@ -95,7 +95,7 @@ const termsOfUse = () => {
                             <LI>The cost of this subscription is $30/month (not including taxes), which will be billed within 24 hours after the website is deemed complete by both the Web Developer and the User, and will be due 30 days after billing date.</LI>
                         </Box>
                         <Box marginTop={25} marginLeft={50}>
-                            <LI>Before the subscription is billed, a one-time payment of $100 per page created will be charged to the User. This charge will not be a part of the monthly recurring payment.</LI>
+                            <LI>Before the subscription is billed, a one-time payment of $100 per page created will be charged to the User (e.g. a website with a Home, About, and Services page will require a one-time payment of $300). This charge will not be a part of the monthly recurring payment.</LI>
                         </Box>
                         <Box marginTop={25} marginLeft={50}>
                             <LI>Services included as part of the Business Website Subscription are: 1) Covered monthly hosting costs of website backend and CMS, 2) covered monthly hosting costs for website frontend, 3) 20 hours-worth of changes to any pages that already exist on the site (as changes are outlined in 2.3), 4) free technical maintenance, 5) 24/7 customer support, 6) and a rate of $100 per page for any additional pages requested after subscription has officially begun.</LI>
@@ -106,7 +106,7 @@ const termsOfUse = () => {
                     </Box>
                     <ol>
                         <Box marginTop={25} marginLeft={50}>
-                            <LI>Allowable changes include, but are not limited to, changes to: 1) branding, 2) page structure, 3) content, 4) backend custom fields, 5) forms, 6) third-party plugins, and 7) any form of tagging for Google Analytics, Google Search, or similar services.</LI>
+                            <LI>Allowable changes include, but are not limited to: 1) branding, 2) page structure, 3) content, 4) backend custom fields, 5) forms, 6) third-party plugins, and 7) any form of tagging for Google Analytics, Google Search, or similar services.</LI>
                         </Box>
                         <Box marginTop={25} marginLeft={50}>
                             <LI>Changes not allowed include, but are not limited to: 1) Brand-new features that do not appear anywhere else on the website, 2) custom plugins that must be built from scratch, 3) custom interactivity that does commonly appear on websites, 4) backend capabilities that were not already provided before the subscription began.</LI>
