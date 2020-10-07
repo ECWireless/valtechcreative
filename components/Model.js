@@ -84,31 +84,33 @@ const Model = ({ onCloseAll }) => {
     return (
         <>
             <ModelContainer>
-                <Container>
-                    <Form style={{ background: colors.white }} paddingTop={50} paddingBottom={50} onSubmit={handleOnSubmit}>
-                        <Box marginBottom={50}>
-                            <H3 color={'#000'} align={'center'}>Connect with a Developer</H3>
-                        </Box>
-                        <Label htmlFor="name">Name:</Label>
-                        <Input required marginTop={10} type="text" id="name" onChange={handleOnChange} value={inputs.name} />
-                        <Label marginTop={50} htmlFor="email">Email:</Label>
-                        <Input required marginTop={10} type="email" id="email" onChange={handleOnChange} value={inputs.email} />
-                        <Label marginTop={50} htmlFor="subscription">Subscription Type:</Label>
-                        <Select required marginTop={10} id="subscription" onChange={handleOnChange} value={inputs.subscription}>
-                            <option value="personal">Personal</option>
-                            <option value="business">Business</option>
-                        </Select>
+                <Fade ssrFadeout>
+                    <Container>
+                        <Form style={{ background: colors.white }} paddingTop={50} paddingBottom={50} onSubmit={handleOnSubmit}>
+                            <Box marginBottom={50}>
+                                <H3 color={'#000'} align={'center'}>Connect with a Developer</H3>
+                            </Box>
+                            <Label htmlFor="name">Name:</Label>
+                            <Input required marginTop={10} type="text" id="name" onChange={handleOnChange} value={inputs.name} />
+                            <Label marginTop={50} htmlFor="email">Email:</Label>
+                            <Input required marginTop={10} type="email" id="email" onChange={handleOnChange} value={inputs.email} />
+                            <Label marginTop={50} htmlFor="subscription">Subscription Type:</Label>
+                            <Select required marginTop={10} id="subscription" onChange={handleOnChange} value={inputs.subscription}>
+                                <option value="personal">Personal</option>
+                                <option value="business">Business</option>
+                            </Select>
 
-                        <Button marginTop={50} type="submit">
-                            {!status.submitting
-                                ? !status.submitted
-                                ? 'Submit'
-                                : 'Submitted'
-                                : <Spinner />
-                            }
-                        </Button>
-                    </Form>
-                </Container>
+                            <Button marginTop={50} type="submit">
+                                {!status.submitting
+                                    ? !status.submitted
+                                    ? 'Submit'
+                                    : 'Submitted'
+                                    : <Spinner />
+                                }
+                            </Button>
+                        </Form>
+                    </Container>
+                </Fade>
             </ModelContainer>
             { snackbar && <Snackbar success={!status.info.error} onCloseSnackbar={onCloseSnackbar} /> }
         </>

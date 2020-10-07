@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import Link from 'next/link'
 import Fade from 'react-reveal/Fade'
 import respondTo from '../components/Breakpoints'
 
@@ -65,9 +66,11 @@ export const SubscriptionCard = ({
                 </Flex>
                 <Box marginTop={25} marginBottom={50}>
                     <Flex justify={'center'} align={'center'}>
-                        <PolicyButton>
-                            View our subscription policy
-                        </PolicyButton>
+                        <Link href='/terms-of-use'>
+                            <PolicyButton>
+                                View our subscription policy
+                            </PolicyButton>
+                        </Link>
                     </Flex>
                 </Box>
             </InfoContainer>
