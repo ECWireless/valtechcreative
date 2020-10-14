@@ -5,7 +5,7 @@ export const Background1 = styled.div`
     ${props => css`
         background: #fff;
         width: 100%;
-        height: 2800px;
+        height: 2850px;
 
         ${respondTo.xs`
             height: 3300px;
