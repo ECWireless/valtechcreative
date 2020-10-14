@@ -5,22 +5,22 @@ export const Background1 = styled.div`
     ${props => css`
         background: #fff;
         width: 100%;
-        height: 2500px;
+        height: 2800px;
 
         ${respondTo.xs`
-            height: 3000px;
+            height: 3300px;
         `}
         
         ${respondTo.sm`
-            height: 3700px;
+            height: 4000px;
         `}
 
         ${respondTo.md`
-            height: 2200px;
+            height: 2400px;
         `}
 
         ${respondTo.lg`
-            height: 2400px;
+            height: 2700px;
         `}
     `};
 `

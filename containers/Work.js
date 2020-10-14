@@ -1,10 +1,11 @@
 import Fade from 'react-reveal/Fade';
 
 // Components
+import { colors } from '../components/theme'
 import { Line, CustomLink, Showcase } from '../components'
 import { Container, Flex, Col2, Col2Left, Col2Right } from '../components/Containers'
-import { H1 } from '../components/Typography'
-import { Box } from '../components/Boxes'
+import { H1, P3 } from '../components/Typography'
+import { Box, Box2 } from '../components/Boxes'
 
 const Work = () => {
     return (
@@ -33,6 +34,13 @@ const Work = () => {
                                     />
                                 </CustomLink>
                             </Fade>
+                            <Box2 width={400} marginTop={50}>
+                                <Fade ssrFadeout bottom delay={200}>
+                                    <P3 center color={colors.black}>
+                                        <strong>Parish Digital</strong> is full-service video production studio offering virtual event production, video editing, and multimedia presentations.
+                                    </P3>
+                                </Fade>
+                            </Box2>
                         </Col2Left>
                     </Box>
                     <Box marginTop={100}>
@@ -48,6 +56,13 @@ const Work = () => {
                                     />
                                 </CustomLink>
                             </Fade>
+                            <Box2 width={400} marginTop={50}>
+                                <Fade ssrFadeout bottom delay={200}>
+                                    <P3 center color={colors.black}>
+                                        <strong>Abraham Home Care</strong> provides home care services to 30 patients and employs a team of over 50 direct care workers.
+                                    </P3>
+                                </Fade>
+                            </Box2>
                         </Col2Right>
                     </Box>
                 </Col2>
@@ -65,6 +80,13 @@ const Work = () => {
                                     />
                                 </CustomLink>
                             </Fade>
+                            <Box2 width={400} marginTop={50}>
+                                <Fade ssrFadeout bottom delay={200}>
+                                    <P3 center color={colors.black}>
+                                        <strong>StudioME</strong> provides media creators access to user-friendly studio spaces, equipment rentals, editing workstations, and custom production services.
+                                    </P3>
+                                </Fade>
+                            </Box2>
                         </Col2Left>
                     </Box>
                     <Box marginTop={100}>
@@ -80,6 +102,13 @@ const Work = () => {
                                     />
                                 </CustomLink>
                             </Fade>
+                            <Box2 width={400} marginTop={50}>
+                                <Fade ssrFadeout bottom delay={200}>
+                                    <P3 center color={colors.black}>
+                                        <strong>SimProdos</strong> is geared to finding the best solution to organizing problems whether it is objects, digital info, or time management.
+                                    </P3>
+                                </Fade>
+                            </Box2>
                         </Col2Right>
                     </Box>
                 </Col2>
