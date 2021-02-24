@@ -47,7 +47,7 @@ const Work = () => {
                         <Col2Right align={'center'} justify={'center'}>
                             <Fade delay={500} ssrFadeout>
                                 <CustomLink
-                                    href="https://abecares.now.sh/"
+                                    href="https://abecares-jet.vercel.app/"
                                     target="_blank" rel="noreferrer"
                                     width={400} height={400}
                                 >
