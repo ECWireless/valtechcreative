@@ -93,7 +93,7 @@ const Work = () => {
                         <Col2Right align={'center'} justify={'center'}>
                             <Fade delay={500} ssrFadeout>
                                 <CustomLink
-                                    href="https://simprodos.com/"
+                                    href="https://mosebachresistors.com/"
                                     target="_blank" rel="noreferrer"
                                     width={400} height={400}
                                 >
