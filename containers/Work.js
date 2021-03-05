@@ -105,7 +105,7 @@ const Work = () => {
                             <Box2 width={400} marginTop={50}>
                                 <Fade ssrFadeout bottom delay={200}>
                                     <P3 center color={colors.black}>
-                                        <strong>SimProdos</strong> is geared to finding the best solution to organizing problems whether it is objects, digital info, or time management.
+                                        <strong>Mosebach Resistors Company</strong> specializes in AC and DC Load Banks of any size, both portable and stationary.
                                     </P3>
                                 </Fade>
                             </Box2>
